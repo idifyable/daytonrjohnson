@@ -1,6 +1,7 @@
 import React from 'react';
 import './styles/base.css';
 import './styles/site.css';
+import './styles/mobile.css';
 import { Home } from './screens/Home';
 import { Projects } from './screens/Projects';
 import { Header } from './components/Header';
