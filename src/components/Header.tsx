@@ -12,9 +12,6 @@ export const Header = () => {
             <NavLink exact to="/" activeClassName="active">Home</NavLink>
           </li>
           <li>
-            <NavLink to="/about/" activeClassName="active">About</NavLink>
-          </li>
-          <li>
             <NavLink to="/projects/" activeClassName="active">Projects</NavLink>
           </li>
         </ul>
