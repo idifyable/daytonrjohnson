@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans:normal,bold,italic|Permanent+Marker');
+@import url('https://use.fontawesome.com/releases/v5.3.1/css/all.css');
 
 /****************************************
 * Global
@@ -266,6 +267,10 @@ ul.my-projects > li {
   padding: 1.5rem;
   margin-bottom: 3rem;
   background-color: #ffffff;
+}
+
+ul.my-projects > li:nth-child(odd) {
+  flex-direction: row-reverse;
 }
 
 ul.my-projects > li:last-of-type {
