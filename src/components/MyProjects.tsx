@@ -19,7 +19,7 @@ export const MyProjects = () => {
               <li>SVG</li>
             </ul>
             <div className="buttons">
-              <a href="www.yourfamilyrealty.com" target="_blank">
+              <a href="www.yourfamilyrealty.com" target="_blank" rel="noopener noreferrer">
                 <button type="button">View Live</button>
               </a>
             </div>
@@ -38,10 +38,10 @@ export const MyProjects = () => {
               <li>AJAX</li>
             </ul>
             <div className="buttons">
-              <a href="https://idifyable.github.io/Wikipedia-Search/" target="_blank">
+              <a href="https://idifyable.github.io/Wikipedia-Search/" target="_blank" rel="noopener noreferrer">
                 <button type="button">View Live</button>
               </a>
-              <a href="https://github.com/idifyable/Wikipedia-Search" target="_blank">
+              <a href="https://github.com/idifyable/Wikipedia-Search" target="_blank" rel="noopener noreferrer">
                 <button type="button">View Repo</button>
               </a>
             </div>
@@ -60,10 +60,10 @@ export const MyProjects = () => {
               <li>jQuery</li>
             </ul>
             <div className="buttons">
-              <a href="https://idifyable.github.io/CSS3-Weather-Animations/" target="_blank">
+              <a href="https://idifyable.github.io/CSS3-Weather-Animations/" target="_blank" rel="noopener noreferrer">
                 <button type="button">View Live</button>
               </a>
-              <a href="https://github.com/idifyable/CSS3-Weather-Animations" target="_blank">
+              <a href="https://github.com/idifyable/CSS3-Weather-Animations" target="_blank" rel="noopener noreferrer">
                 <button type="button">View Repo</button>
               </a>
             </div>
@@ -83,10 +83,10 @@ export const MyProjects = () => {
               <li>Twitter Button</li>
             </ul>
             <div className="buttons">
-              <a href="https://idifyable.github.io/Quote-O-Matic/" target="_blank">
+              <a href="https://idifyable.github.io/Quote-O-Matic/" target="_blank" rel="noopener noreferrer">
                 <button type="button">View Live</button>
               </a>
-              <a href="https://github.com/idifyable/Quote-O-Matic" target="_blank">
+              <a href="https://github.com/idifyable/Quote-O-Matic" target="_blank" rel="noopener noreferrer">
                 <button type="button">View Repo</button>
               </a>
             </div>

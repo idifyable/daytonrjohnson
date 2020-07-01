@@ -11,17 +11,17 @@ export const Footer = () => {
             </a>
           </li>
           <li>
-            <a href="https://github.com/idifyable" target="_blank">
+            <a href="https://github.com/idifyable" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-github"></i>
             </a>
           </li>
           <li>
-            <a href="http://codepen.io/idifyable/" target="_blank">
+            <a href="http://codepen.io/idifyable/" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-codepen"></i>
             </a>
           </li>
           <li>
-            <a href="https://twitter.com/idifyable" target="_blank">
+            <a href="https://twitter.com/idifyable" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-twitter"></i>
             </a>
           </li>
