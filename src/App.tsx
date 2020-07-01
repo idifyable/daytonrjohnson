@@ -1,17 +1,32 @@
 import React from 'react';
 import './styles/base.css';
 import './styles/site.css';
-import { Home as HomeScreen } from './screens/Home';
+import { Home } from './screens/Home';
+import { Projects } from './screens/Projects';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <HomeScreen />
-      <Footer />
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <Switch>
+          <Route path="/projects">
+            <Projects />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
