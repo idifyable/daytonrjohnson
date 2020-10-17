@@ -11,9 +11,10 @@ static_sites:
       repo: idifyable/daytonrjohnson-v2
     envs:
       - key: PUBLIC_URL
-        value: 'https://daytonrjohnson-v-2-nqkrm.ondigitalocean.app'
-      - key: TEST
-        value: 'debug'
-
+        value: 'https://daytonrjohnson-4ot6g.ondigitalocean.app'
     routes:
       - path: /
+domains:
+  - domain: daytonrjohnson.com
+    type: PRIMARY
+    wildcard: true
