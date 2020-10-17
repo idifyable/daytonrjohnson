@@ -6,7 +6,7 @@ static_sites:
     build_command: 'yarn build'
     output_dir: '/build'
     github:
-      branch: deploy/digital-ocean
+      branch: deploy/live
       deploy_on_push: true
       repo: idifyable/daytonrjohnson-v2
     envs:
