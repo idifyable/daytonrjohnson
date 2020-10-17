@@ -1,12 +1,11 @@
 name: daytonrjohnson
 region: nyc
-routes:
-  - path: /
 static_sites:
   - environment_slug: html
     name: daytonrjohnson-frontend
-    build_command: 'yarn build'
-    output_dir: './build'
+    build_command: 'yarn build && find .. -maxdepth 2 -type d -ls
+'
+    output_dir: 'build'
     github:
       branch: deploy/digital-ocean
       deploy_on_push: true
@@ -14,3 +13,5 @@ static_sites:
     envs:
       - key: PUBLIC_URL
         value: 'daytonrjohnson-v-2-nqkrm.ondigitalocean.app'
+    routes:
+      - path: /
