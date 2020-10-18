@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 export const MyProjects = () => {
   return (
@@ -18,8 +18,7 @@ export const MyProjects = () => {
               <li>Responsive Design</li>
               <li>SVG</li>
             </ul>
-            <div className="buttons">
-            </div>
+            <div className="buttons"></div>
           </div>
         </li>
         <li id="wikipedia-search-page">
@@ -35,10 +34,18 @@ export const MyProjects = () => {
               <li>AJAX</li>
             </ul>
             <div className="buttons">
-              <a href="https://idifyable.github.io/Wikipedia-Search/" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://idifyable.github.io/Wikipedia-Search/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <button type="button">View Live</button>
               </a>
-              <a href="https://github.com/idifyable/Wikipedia-Search" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://github.com/idifyable/Wikipedia-Search"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <button type="button">View Repo</button>
               </a>
             </div>
@@ -57,10 +64,18 @@ export const MyProjects = () => {
               <li>jQuery</li>
             </ul>
             <div className="buttons">
-              <a href="https://idifyable.github.io/CSS3-Weather-Animations/" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://idifyable.github.io/CSS3-Weather-Animations/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <button type="button">View Live</button>
               </a>
-              <a href="https://github.com/idifyable/CSS3-Weather-Animations" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://github.com/idifyable/CSS3-Weather-Animations"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <button type="button">View Repo</button>
               </a>
             </div>
@@ -80,10 +95,18 @@ export const MyProjects = () => {
               <li>Twitter Button</li>
             </ul>
             <div className="buttons">
-              <a href="https://idifyable.github.io/Quote-O-Matic/" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://idifyable.github.io/Quote-O-Matic/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <button type="button">View Live</button>
               </a>
-              <a href="https://github.com/idifyable/Quote-O-Matic" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://github.com/idifyable/Quote-O-Matic"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <button type="button">View Repo</button>
               </a>
             </div>
@@ -91,5 +114,5 @@ export const MyProjects = () => {
         </li>
       </ul>
     </section>
-  )
-}
+  );
+};

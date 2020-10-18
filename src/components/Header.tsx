@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-  NavLink
-} from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 
 export const Header = () => {
   return (
@@ -9,13 +7,17 @@ export const Header = () => {
       <nav>
         <ul>
           <li>
-            <NavLink exact to="/" activeClassName="active">Home</NavLink>
+            <NavLink exact to="/" activeClassName="active">
+              Home
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/projects/" activeClassName="active">Projects</NavLink>
+            <NavLink to="/projects/" activeClassName="active">
+              Projects
+            </NavLink>
           </li>
         </ul>
       </nav>
     </header>
-  )
-}
+  );
+};

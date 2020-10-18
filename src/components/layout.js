@@ -3,8 +3,8 @@ import styles from './layout.module.css';
 import utilStyles from '../pages/styles/utils.module.css';
 import Link from 'next/link';
 
-const name = '[Your Name]'
-export const siteTitle = 'Dayton Johnson | Web Developer'
+const name = '[Your Name]';
+export const siteTitle = 'Dayton Johnson | Web Developer';
 
 export default function Layout({ children, home }) {
   return (
@@ -62,5 +62,5 @@ export default function Layout({ children, home }) {
         </div>
       )}
     </div>
-  )
+  );
 }
