@@ -17,6 +17,6 @@ static_sites:
     routes:
       - path: /
 domains:
-  - domain: daytonrjohnson.com
+  - domain: www.daytonrjohnson.com
     type: PRIMARY
     wildcard: true
