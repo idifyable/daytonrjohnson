@@ -4,14 +4,12 @@ static_sites:
   - environment_slug: html
     name: daytonrjohnson-frontend
     build_command: 'yarn build'
-    output_dir: '/build'
+    output_dir: '/out'
     github:
       branch: deploy/live
       deploy_on_push: true
       repo: idifyable/daytonrjohnson-v2
     envs:
-      - key: PUBLIC_URL
-        value: 'https://daytonrjohnson-4ot6g.ondigitalocean.app'
       - key: REACT_APP_GOOGLE_ANALYTICS_ID
         value: 'UA-96169555-2'
     routes:

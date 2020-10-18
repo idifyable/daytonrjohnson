@@ -1,21 +1,25 @@
-import React from 'react';
-import {
-  NavLink
-} from "react-router-dom";
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
-export const Header = () => {
+export const Header: React.FC = () => {
+  const router = useRouter();
+
   return (
     <header>
       <nav>
         <ul>
           <li>
-            <NavLink exact to="/" activeClassName="active">Home</NavLink>
+            <Link href="/">
+              <a className={router.pathname === '/' ? 'active' : ''}>Home</a>
+            </Link>
           </li>
           <li>
-            <NavLink to="/projects/" activeClassName="active">Projects</NavLink>
+            <Link href="/projects/">
+              <a className={router.pathname === '/projects' ? 'active' : ''}>Projects</a>
+            </Link>
           </li>
         </ul>
       </nav>
     </header>
-  )
-}
+  );
+};

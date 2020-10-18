@@ -30,7 +30,7 @@
   header > a.logo-text {
     line-height: 1.25em;
     animation: none;
-    transition: font-size .15s ease-in-out;
+    transition: font-size 0.15s ease-in-out;
   }
 
   @media (max-width: 400px) {
@@ -58,7 +58,7 @@
   section.neon-billboard h1 {
     font-size: 50px;
     line-height: 1em;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
   }
 
   section.neon-billboard h2 {
@@ -174,7 +174,6 @@
   ****************************************/
 
   @media only screen and (max-width: 500px) {
-
     .wrapper {
       width: 100vw;
     }
@@ -191,14 +190,8 @@
       font-size: 2em;
       line-height: 1em;
       animation: none;
-      text-shadow: 0 0 5px #fff,
-                  0 0 10px #fff,
-                  0 0 15px #fff,
-                  0 0 20px #228dff,
-                  0 0 35px #228dff,
-                  0 0 40px #228dff,
-                  0 0 50px #228dff,
-                  0 0 75px #228dff;
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228dff, 0 0 35px #228dff,
+        0 0 40px #228dff, 0 0 50px #228dff, 0 0 75px #228dff;
       color: #228dff;
     }
 
