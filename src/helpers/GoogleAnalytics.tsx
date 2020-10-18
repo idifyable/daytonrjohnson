@@ -14,7 +14,7 @@ export const GoogleAnalytics: React.FC<GoogleAnalyticsProps> = ({
   const [previousLocationKey, setPreviousLocationKey] = useState('');
 
   // Setup ReactGA configuration
-  if(props.analyticsId) {
+  if(props.analyticsId && !enabled) {
     ReactGA.initialize(props.analyticsId)
     setEnabled(true);
   }
