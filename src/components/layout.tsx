@@ -1,8 +1,7 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import { NextPage } from 'next';
-import styles from './layout.module.css';
-import utilStyles from '../pages/styles/utils.module.css';
+import Header from '@components/Header.tsx';
+import Footer from '@components/Footer.tsx';
 
 const name = 'Dayton Johnson';
 export const siteTitle = 'Dayton Johnson | Web Developer';
@@ -10,11 +9,12 @@ export const siteTitle = 'Dayton Johnson | Web Developer';
 interface Props {
   children?: any;
   home?: boolean;
+  className?: string;
 }
 
-const Layout: NextPage<Props> = ({ children, home }: Props) => {
+const Layout: NextPage<Props> = ({ children, home, className }: Props) => {
   return (
-    <div className={styles.container}>
+    <div className={className}>
       <Head>
         <link rel="icon" href="favicon.ico" />
         <meta
@@ -30,43 +30,9 @@ const Layout: NextPage<Props> = ({ children, home }: Props) => {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className={styles.header}>
-        {home ? (
-          <>
-            <img
-              src="/images/content/portrait.jpg"
-              className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
-              alt={name}
-            />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
-          </>
-        ) : (
-          <>
-            <Link href="/">
-              <a>
-                <img
-                  src="/images/profile.jpg"
-                  className={`${styles.headerImage} ${utilStyles.borderCircle}`}
-                  alt={name}
-                />
-              </a>
-            </Link>
-            <h2 className={utilStyles.headingLg}>
-              <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
-              </Link>
-            </h2>
-          </>
-        )}
-      </header>
+      <Header />
       <main>{children}</main>
-      {!home && (
-        <div className={styles.backToHome}>
-          <Link href="/">
-            <a>← Back to home</a>
-          </Link>
-        </div>
-      )}
+      <Footer />
     </div>
   );
 };

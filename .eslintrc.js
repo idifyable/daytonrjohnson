@@ -39,9 +39,7 @@ module.exports = {
   },
   settings: {
     'import/resolver': {
-      node: {
-        paths: ['~'],
-      },
+      typescript: {}, // this loads <rootdir>/tsconfig.json to eslint
     },
   },
 };

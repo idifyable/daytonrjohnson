@@ -1,6 +1,4 @@
-import React from 'react';
-
-export const WhoAmI = () => {
+export const WhoAmI: React.FC = () => {
   return (
     <section className="about padded">
       <div className="container">
@@ -40,3 +38,5 @@ export const WhoAmI = () => {
     </section>
   );
 };
+
+export default WhoAmI;

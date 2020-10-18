@@ -1,5 +1,7 @@
 import { NextPage } from 'next';
 import './styles/global.css';
+import './styles/site.css';
+import './styles/mobile.css';
 
 interface Props {
   Component: any;

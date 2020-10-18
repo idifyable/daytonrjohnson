@@ -1,6 +1,4 @@
-import React from 'react';
-
-export const NeonBillboard = () => {
+export const NeonBillboard: React.FC = () => {
   return (
     <section className="neon-billboard">
       <h1>Dayton Johnson</h1>
@@ -8,3 +6,5 @@ export const NeonBillboard = () => {
     </section>
   );
 };
+
+export default NeonBillboard;
