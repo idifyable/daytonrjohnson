@@ -27,7 +27,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   line-height: 1em;
 }
 
@@ -65,7 +65,7 @@ ul.bulleted {
 }
 
 ul.bulleted > li {
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 
 /****************************************
@@ -253,7 +253,7 @@ ul.my-projects-preview > li p {
   font: normal bold 14px/1em 'Lato';
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: .8px;
+  letter-spacing: 0.8px;
 }
 
 /****************************************
@@ -330,7 +330,7 @@ footer ul.links > li i {
   font-size: 26px;
   line-height: 26px;
   color: #5a6e87;
-  transition: color .5s;
+  transition: color 0.5s;
 }
 
 footer ul.links > li:hover i {
@@ -344,7 +344,7 @@ footer ul.links > li:hover i {
 .button,
 button {
   position: relative;
-  padding: .75em 2em;
+  padding: 0.75em 2em;
   font-size: 18px;
   color: white;
   border: none;
@@ -398,14 +398,14 @@ img {
     color: white;
   }
   50% {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228dff,
-      0 0 70px #228dff, 0 0 80px #228dff, 0 0 100px #228dff, 0 0 150px #228dff;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228dff, 0 0 70px #228dff,
+      0 0 80px #228dff, 0 0 100px #228dff, 0 0 150px #228dff;
     color: #fff;
   }
   80%,
   100% {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228dff,
-      0 0 35px #228dff, 0 0 40px #228dff, 0 0 50px #228dff, 0 0 75px #228dff;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228dff, 0 0 35px #228dff,
+      0 0 40px #228dff, 0 0 50px #228dff, 0 0 75px #228dff;
     color: #228dff;
   }
 }
