@@ -2,7 +2,7 @@ name: daytonrjohnson
 region: nyc
 static_sites:
   - environment_slug: html
-    name: daytonrjohnson-frontend-nextjs
+    name: daytonrjohnson-frontend
     build_command: 'yarn build'
     output_dir: '/out'
     github:
