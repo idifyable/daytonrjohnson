@@ -7,7 +7,7 @@ export const Projects = () => {
         <h3>My Projects</h3>
         <ul className="my-projects-preview">
           <li>
-            <a href="/projects/#your-family-realty">
+            <a href="/projects">
               <img
                 src="/images/content/yourfamilyrealty.jpg"
                 alt="Your Family Realty"
@@ -16,7 +16,7 @@ export const Projects = () => {
             </a>
           </li>
           <li>
-            <a href="/projects/#wikipedia-search-page">
+            <a href="/projects">
               <img
                 src="/images/content/project-wikipedia.png"
                 alt="Wikipedia Search Page"
@@ -25,7 +25,7 @@ export const Projects = () => {
             </a>
           </li>
           <li>
-            <a href="/projects/#animated-weather-icons">
+            <a href="/projects">
               <img
                 src="/images/content/project-weather.png"
                 alt="Animated Weather Icons"
@@ -34,7 +34,7 @@ export const Projects = () => {
             </a>
           </li>
           <li>
-            <a href="/projects/#quote-o-matic">
+            <a href="/projects">
               <img
                 src="/images/content/project-quote.png"
                 alt="Quote-O-Matic"
