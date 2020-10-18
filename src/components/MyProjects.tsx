@@ -19,9 +19,6 @@ export const MyProjects = () => {
               <li>SVG</li>
             </ul>
             <div className="buttons">
-              <a href="www.yourfamilyrealty.com" target="_blank" rel="noopener noreferrer">
-                <button type="button">View Live</button>
-              </a>
             </div>
           </div>
         </li>
