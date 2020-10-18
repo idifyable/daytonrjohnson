@@ -22,7 +22,7 @@
       "@data/*": ["./src/data/*"],
       "@typeDefs/*": ["./src/types/*"],
       "@public/*": ["./public/*"],
-      "@utils/*": ["./src/utils/*"]
+      "@lib/*": ["./src/lib/*"]
     }
   },
   "include": ["**/*.ts", "**/*.tsx", "next-env.d.ts", "next.config.js", "src/pages/index.tsx"],

@@ -4,17 +4,27 @@ import matter from 'gray-matter';
 import remark from 'remark';
 import html from 'remark-html';
 
-const postsDirectory = path.join(process.cwd(), 'posts');
+export type Project = {
+  id: string;
+  sort?: number;
+  title?: string;
+  technologiesUsed?: string[];
+  image?: string;
+  demoUrl?: string;
+  repoUrl?: string;
+};
 
-export function getSortedPostsData() {
+const projectsDirectory = path.join(process.cwd(), '/data/projects');
+
+export function getSortedProjectsData(): Project[] {
   // Get file names under /posts
-  const fileNames = fs.readdirSync(postsDirectory);
+  const fileNames = fs.readdirSync(projectsDirectory);
   const allPostsData = fileNames.map((fileName) => {
     // Remove ".md" from file name to get id
-    const id = fileName.replace(/\.md$/, '');
+    const id: string = fileName.replace(/\.md$/, '');
 
     // Read markdown file as string
-    const fullPath = path.join(postsDirectory, fileName);
+    const fullPath = path.join(projectsDirectory, fileName);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
 
     // Use gray-matter to parse the post metadata section
@@ -27,17 +37,16 @@ export function getSortedPostsData() {
     };
   });
   // Sort posts by date
-  return allPostsData.sort((a, b) => {
-    if (a.date < b.date) {
+  return allPostsData.sort((a: Project, b: Project) => {
+    if (a.sort > b.sort) {
       return 1;
-    } else {
-      return -1;
     }
+    return -1;
   });
 }
 
-export function getAllPostIds() {
-  const fileNames = fs.readdirSync(postsDirectory);
+export function getAllProjectIds(): { params: { id: string } }[] {
+  const fileNames = fs.readdirSync(projectsDirectory);
   return fileNames.map((fileName) => {
     return {
       params: {
@@ -47,8 +56,8 @@ export function getAllPostIds() {
   });
 }
 
-export async function getPostData(id) {
-  const fullPath = path.join(postsDirectory, `${id}.md`);
+export async function getProjectData(id: string): Promise<{ id: string; contentHtml: string }> {
+  const fullPath = path.join(projectsDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
 
   // Use gray-matter to parse the post metadata section

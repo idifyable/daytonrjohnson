@@ -1,9 +1,8 @@
 import Head from 'next/head';
-import { NextPage } from 'next';
-import Layout from '../../components/Layout';
-import { getAllPostIds, getPostData } from '../../lib/posts';
-import Date from '../../components/date';
-import utilStyles from '../styles/utils.module.css';
+import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
+import { getAllProjectIds, getProjectData } from '@lib/projects';
+import Layout from '@components/Layout';
+import { Date } from '@components/Date';
 
 interface Props {
   postData: any;
@@ -16,8 +15,8 @@ export const Post: NextPage<Props> = ({ postData }: Props) => {
         <title>{postData.title}</title>
       </Head>
       <article>
-        <h1 className={utilStyles.headingXl}>{postData.title}</h1>
-        <div className={utilStyles.lightText}>
+        <h1>{postData.title}</h1>
+        <div>
           <Date dateString={postData.date} />
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
@@ -26,21 +25,21 @@ export const Post: NextPage<Props> = ({ postData }: Props) => {
   );
 };
 
-export async function getStaticPaths() {
-  const paths = getAllPostIds();
+export const getStaticPaths: GetStaticPaths = async () => {
+  const paths = getAllProjectIds();
   return {
     paths,
     fallback: false,
   };
-}
+};
 
-export async function getStaticProps({ params }) {
-  const postData = await getPostData(params.id);
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const postData = await getProjectData(params.id);
   return {
     props: {
       postData,
     },
   };
-}
+};
 
 export default Post;
