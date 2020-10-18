@@ -7,7 +7,7 @@ static_sites:
     output_dir: '/out'
     github:
       branch: deploy/live
-      deploy_on_push: false
+      deploy_on_push: true
       repo: idifyable/daytonrjohnson-v2
     envs:
       - key: REACT_APP_GOOGLE_ANALYTICS_ID
