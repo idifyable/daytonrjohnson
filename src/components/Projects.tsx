@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Link } from "react-router-dom";
 
 export const Projects = () => {
   return (
@@ -7,40 +8,40 @@ export const Projects = () => {
         <h3>My Projects</h3>
         <ul className="my-projects-preview">
           <li>
-            <a href="/projects/">
+            <Link to='/projects#your-family-realty'>
               <img
                 src="/images/content/yourfamilyrealty.jpg"
                 alt="Your Family Realty"
               />
               <p>Your Family Realty</p>
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/projects/">
+            <Link to='/projects#wikipedia-search-page'>
               <img
                 src="/images/content/project-wikipedia.png"
                 alt="Wikipedia Search Page"
               />
               <p>Wikipedia Search Page</p>
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/projects/">
+            <Link to='/projects#animated-weather-icons'>
               <img
                 src="/images/content/project-weather.png"
                 alt="Animated Weather Icons"
               />
               <p>Animated Weather Icons</p>
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/projects/">
+            <Link to='/projects#quote-o-matic'>
               <img
                 src="/images/content/project-quote.png"
                 alt="Quote-O-Matic"
               />
               <p>Quote-O-Matic</p>
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
