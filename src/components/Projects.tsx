@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export const Projects: React.FC<{}> = () => {
+export const Projects: React.FC = () => {
   return (
     <section className="projects padded">
       <div className="container padded">

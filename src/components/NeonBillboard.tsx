@@ -6,5 +6,3 @@ export const NeonBillboard: React.FC = () => {
     </section>
   );
 };
-
-export default NeonBillboard;

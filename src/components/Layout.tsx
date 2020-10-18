@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { NextPage } from 'next';
-import Header from '@components/Header.tsx';
-import Footer from '@components/Footer.tsx';
+import { Header } from '@components/Header.tsx';
+import { Footer } from '@components/Footer.tsx';
 
 const name = 'Dayton Johnson';
 export const siteTitle = 'Dayton Johnson | Web Developer';
@@ -36,4 +36,5 @@ const Layout: NextPage<Props> = ({ children, home, className }: Props) => {
     </div>
   );
 };
+
 export default Layout;

@@ -3,19 +3,17 @@ import { NextPage } from 'next';
 import Layout, { siteTitle } from '@components/Layout';
 import { NeonBillboard } from '@components/NeonBillboard';
 import { WhoAmI } from '@components/WhoAmI';
-import { Projects } from '@components/Projects';
+import { MyProjects } from '@components/MyProjects';
 
-const Home: NextPage = () => {
+const Projects: NextPage = () => {
   return (
     <Layout home className="home">
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <NeonBillboard />
-      <WhoAmI />
-      <Projects />
+      <MyProjects />
     </Layout>
   );
 };
 
-export default Home;
+export default Projects;

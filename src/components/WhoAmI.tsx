@@ -38,5 +38,3 @@ export const WhoAmI: React.FC = () => {
     </section>
   );
 };
-
-export default WhoAmI;

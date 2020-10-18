@@ -15,7 +15,7 @@ export const Header: React.FC = () => {
           </li>
           <li>
             <Link href="/projects/">
-              <a className={router.pathname === '/projects/' ? 'active' : ''}>Projects</a>
+              <a className={router.pathname === '/projects' ? 'active' : ''}>Projects</a>
             </Link>
           </li>
         </ul>
@@ -23,5 +23,3 @@ export const Header: React.FC = () => {
     </header>
   );
 };
-
-export default Header;

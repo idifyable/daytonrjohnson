@@ -1,6 +1,4 @@
-import React from 'react';
-
-export const MyProjects = () => {
+export const MyProjects: React.FC = () => {
   return (
     <section className="my-projects padded">
       <h3>My Projects</h3>
@@ -18,7 +16,7 @@ export const MyProjects = () => {
               <li>Responsive Design</li>
               <li>SVG</li>
             </ul>
-            <div className="buttons"></div>
+            <div className="buttons" />
           </div>
         </li>
         <li id="wikipedia-search-page">
