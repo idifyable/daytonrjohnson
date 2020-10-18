@@ -10,9 +10,7 @@ static_sites:
       deploy_on_push: false
       repo: idifyable/daytonrjohnson-v2
     envs:
-      - key: PUBLIC_URL
-        value: 'https://daytonrjohnson-4ot6g.ondigitalocean.app'
       - key: REACT_APP_GOOGLE_ANALYTICS_ID
-        value: 'UA-96169555-2'
+        value: 'UA-55555555-5'
     routes:
       - path: /
