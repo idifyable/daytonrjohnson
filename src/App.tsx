@@ -11,6 +11,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 function App() {
   const googleAnalyticsID = process.env.REACT_APP_GOOGLE_ANALYTICS_ID || '';
+  console.log(process.env.REACT_APP_GOOGLE_ANALYTICS_ID);
+
 
   return (
     <Router>
