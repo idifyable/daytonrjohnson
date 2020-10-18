@@ -1,13 +1,13 @@
-name: daytonrjohnson
+name: daytonrjohnson-nextjs
 region: nyc
 static_sites:
   - environment_slug: html
-    name: daytonrjohnson-frontend
+    name: daytonrjohnson-frontend-nextjs
     build_command: 'yarn build'
-    output_dir: '/build'
+    output_dir: '/out'
     github:
-      branch: deploy/live
-      deploy_on_push: true
+      branch: feature/convert-to-nextjs
+      deploy_on_push: false
       repo: idifyable/daytonrjohnson-v2
     envs:
       - key: PUBLIC_URL
@@ -16,7 +16,3 @@ static_sites:
         value: 'UA-96169555-2'
     routes:
       - path: /
-domains:
-  - domain: www.daytonrjohnson.com
-    type: PRIMARY
-    wildcard: true
