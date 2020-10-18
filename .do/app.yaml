@@ -12,6 +12,8 @@ static_sites:
     envs:
       - key: PUBLIC_URL
         value: 'https://daytonrjohnson-4ot6g.ondigitalocean.app'
+      - key: REACT_APP_GOOGLE_ANALYTICS_ID
+        value: 'UA-96169555-2'
     routes:
       - path: /
 domains:
