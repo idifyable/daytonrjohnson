@@ -1,10 +1,15 @@
+import Head from 'next/head';
+import { NextPage } from 'next';
 import Layout from '../../components/layout';
 import { getAllPostIds, getPostData } from '../../lib/posts';
-import Head from 'next/head';
 import Date from '../../components/date';
 import utilStyles from '../styles/utils.module.css';
 
-export default function Post({ postData }) {
+interface Props {
+  postData: any;
+}
+
+export const Post: NextPage<Props> = ({ postData }: Props) => {
   return (
     <Layout>
       <Head>
@@ -19,7 +24,7 @@ export default function Post({ postData }) {
       </article>
     </Layout>
   );
-}
+};
 
 export async function getStaticPaths() {
   const paths = getAllPostIds();
@@ -37,3 +42,5 @@ export async function getStaticProps({ params }) {
     },
   };
 }
+
+export default Post;

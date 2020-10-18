@@ -1,12 +1,18 @@
 import Head from 'next/head';
+import Link from 'next/link';
+import { NextPage } from 'next';
 import styles from './layout.module.css';
 import utilStyles from '../pages/styles/utils.module.css';
-import Link from 'next/link';
 
-const name = '[Your Name]';
+const name = 'Dayton Johnson';
 export const siteTitle = 'Dayton Johnson | Web Developer';
 
-export default function Layout({ children, home }) {
+interface Props {
+  children?: any;
+  home?: boolean;
+}
+
+const Layout: NextPage<Props> = ({ children, home }: Props) => {
   return (
     <div className={styles.container}>
       <Head>
@@ -28,7 +34,7 @@ export default function Layout({ children, home }) {
         {home ? (
           <>
             <img
-              src="/images/profile.jpg"
+              src="/images/content/portrait.jpg"
               className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
               alt={name}
             />
@@ -63,4 +69,5 @@ export default function Layout({ children, home }) {
       )}
     </div>
   );
-}
+};
+export default Layout;

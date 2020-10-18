@@ -35,6 +35,7 @@ module.exports = {
     'react/no-unescaped-entities': 'off',
     'jsx-a11y/accessible-emoji': 'off',
     'react/react-in-jsx-scope': 'off',
+    'react/require-default-props': 'off',
   },
   settings: {
     'import/resolver': {
