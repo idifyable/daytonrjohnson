@@ -1,9 +1,14 @@
+import styled from 'styled-components';
 import { Navigation } from '@components/Navigation';
 
 export const Header: React.FC = () => {
   return (
-    <header>
+    <HeaderWrapper>
       <Navigation />
-    </header>
+    </HeaderWrapper>
   );
 };
+
+const HeaderWrapper = styled.header`
+  flex-direction: column-reverse;
+`;
