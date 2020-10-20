@@ -4,8 +4,10 @@ import { breakpoints } from '@constants/breakpoints';
 export const NeonBillboard: React.FC = () => {
   return (
     <Section>
-      <PrimaryHeading>Dayton Johnson</PrimaryHeading>
-      <SecondaryHeading>Web Developer</SecondaryHeading>
+      <Wrapper>
+        <PrimaryHeading>Dayton Johnson</PrimaryHeading>
+        <SecondaryHeading>Web Developer</SecondaryHeading>
+      </Wrapper>
     </Section>
   );
 };
@@ -15,13 +17,13 @@ const Section = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1rem 0 4rem 0;
+  padding: 3rem 0;
   max-width: 100%;
   color: white;
   text-align: center;
 
   @media ${breakpoints.desktop} {
-    padding: 5rem 0 7rem 0;
+    padding: 6rem 0;
   }
 `;
 
@@ -45,21 +47,35 @@ const neonAnimation = keyframes`
 `;
 
 const PrimaryHeading = styled.h1`
+  margin: 0 0 0.5rem 0;
+  color: white;
   font: normal normal 50px/1em 'Permanent Marker', cursive;
-  animation: ${neonAnimation} 7s ease-in-out infinite alternate;
+
+  @media only screen and (min-width: 500px) {
+    animation: ${neonAnimation} 7s ease-in-out infinite alternate;
+  }
 
   @media ${breakpoints.desktop} {
     font-size: 80px;
     line-height: 1em;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
   }
 `;
 
 const SecondaryHeading = styled.h1`
+  margin: 0;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228dff, 0 0 35px #228dff,
+    0 0 40px #228dff, 0 0 50px #228dff, 0 0 75px #228dff;
+  color: #228dff;
   font: normal normal 28px/1em 'Permanent Marker', cursive;
-  animation: ${neonAnimation} 7s ease-in-out infinite alternate-reverse;
+
+  @media only screen and (min-width: 500px) {
+    animation: ${neonAnimation} 7s ease-in-out infinite alternate-reverse;
+  }
 
   @media ${breakpoints.desktop} {
     font-size: 48px;
   }
 `;
+
+const Wrapper = styled.div``;
