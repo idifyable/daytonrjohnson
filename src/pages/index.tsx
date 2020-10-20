@@ -26,7 +26,9 @@ const Home: NextPage<Props> = ({ allProjects }) => {
       <NeonBillboard />
       <WhoAmI />
       <Container>
-        <ProjectsPreview projectsData={allProjects} />
+        <Section>
+          <ProjectsPreview projectsData={allProjects} />
+        </Section>
       </Container>
     </Layout>
   );

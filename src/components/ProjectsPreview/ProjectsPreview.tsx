@@ -29,4 +29,5 @@ const ProjectsList = styled.ul`
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+  list-style: none;
 `;
