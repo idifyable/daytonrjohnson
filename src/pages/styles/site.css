@@ -201,36 +201,6 @@ section.projects h3 {
   margin-bottom: 2rem;
 }
 
-ul.my-projects-preview {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-ul.my-projects-preview > li {
-  position: relative;
-  width: calc(25% - 1.5rem);
-}
-
-ul.my-projects-preview > li img {
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  width: 275px;
-  height: auto;
-  border: 4px solid #ffffff;
-}
-
-ul.my-projects-preview > li p {
-  color: #10243c;
-  font: normal bold 14px/1em 'Lato';
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
-}
-
 /****************************************
 * My Projects
 ****************************************/

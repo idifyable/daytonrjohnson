@@ -1,5 +1,5 @@
+import styled from 'styled-components';
 import { Project } from '@lib/projects';
-import Link from 'next/link';
 import { ProjectsPreviewItem } from './ProjectsPreviewItem/ProjectsPreviewItem';
 
 interface Props {
@@ -8,15 +8,25 @@ interface Props {
 
 export const ProjectsPreview: React.FC<Props> = ({ projectsData }) => {
   const projectPreviewItems = projectsData.map((projectData) => {
-    return <ProjectsPreviewItem projectData={projectData} />;
+    return <ProjectsPreviewItem key={projectData.id} projectData={projectData} />;
   });
 
   return (
-    <section className="projects padded">
-      <div className="container padded">
-        <h3>My Projects</h3>
-        <ul className="my-projects-preview">{projectPreviewItems}</ul>
-      </div>
-    </section>
+    <div>
+      <Heading>My Projects</Heading>
+      <ProjectsList>{projectPreviewItems}</ProjectsList>
+    </div>
   );
 };
+
+const Heading = styled.h3`
+  margin-bottom: 2rem;
+`;
+
+const ProjectsList = styled.ul`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+`;
