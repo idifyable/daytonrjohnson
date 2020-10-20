@@ -1,4 +1,4 @@
 export const breakpoints = {
-  mobile: '(min-width: 0px)',
+  mobile: '(max-width: 1007px)',
   desktop: '(min-width: 1008px)',
 };
