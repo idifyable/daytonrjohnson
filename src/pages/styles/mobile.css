@@ -19,24 +19,6 @@
   }
 
   /****************************************
-  * Neon Billboard
-  ****************************************/
-
-  section.neon-billboard {
-    padding: 1rem 0 4rem 0;
-  }
-
-  section.neon-billboard h1 {
-    font-size: 50px;
-    line-height: 1em;
-    margin-bottom: 0.5rem;
-  }
-
-  section.neon-billboard h2 {
-    font-size: 28px;
-  }
-
-  /****************************************
   * About
   ****************************************/
 
@@ -129,15 +111,6 @@
   .button,
   button {
     padding: 0.6em;
-  }
-
-  /****************************************
-  * Footer
-  ****************************************/
-
-  footer .container {
-    padding-right: 1.5rem;
-    padding-left: 1.5rem;
   }
 
   /****************************************

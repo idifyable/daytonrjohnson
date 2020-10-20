@@ -215,38 +215,6 @@ ul.my-projects > li .buttons > a:first-of-type button {
 }
 
 /****************************************
-* Footer
-****************************************/
-
-footer {
-  padding: 1rem 0;
-  background-color: #08111c;
-}
-
-footer ul.links {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: auto;
-  max-width: 300px;
-}
-
-footer ul.links > li {
-  margin-bottom: 0;
-}
-
-footer ul.links > li i {
-  font-size: 26px;
-  line-height: 26px;
-  color: #5a6e87;
-  transition: color 0.5s;
-}
-
-footer ul.links > li:hover i {
-  color: #4d7ab3;
-}
-
-/****************************************
 * Buttons
 ****************************************/
 
