@@ -1,4 +1,29 @@
 import styled, { keyframes } from 'styled-components';
+import { breakpoints } from '@constants/breakpoints';
+
+export const NeonBillboard: React.FC = () => {
+  return (
+    <Section>
+      <PrimaryHeading>Dayton Johnson</PrimaryHeading>
+      <SecondaryHeading>Web Developer</SecondaryHeading>
+    </Section>
+  );
+};
+
+const Section = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0 4rem 0;
+  max-width: 100%;
+  color: white;
+  text-align: center;
+
+  @media ${breakpoints.desktop} {
+    padding: 5rem 0 7rem 0;
+  }
+`;
 
 const neonAnimation = keyframes`
   0%,
@@ -18,30 +43,23 @@ const neonAnimation = keyframes`
     color: #228dff;
   }
 `;
-const Section = styled.section`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 5rem 0 7rem 0;
-  max-width: 100%;
-  color: white;
-  text-align: center;
-`;
+
 const PrimaryHeading = styled.h1`
-  font: normal normal 80px/1em 'Permanent Marker', cursive;
+  font: normal normal 50px/1em 'Permanent Marker', cursive;
   animation: ${neonAnimation} 7s ease-in-out infinite alternate;
-`;
-const SecondaryHeading = styled.h1`
-  font: normal normal 48px/1em 'Permanent Marker', cursive;
-  animation: ${neonAnimation} 7s ease-in-out infinite alternate-reverse;
+
+  @media ${breakpoints.desktop} {
+    font-size: 80px;
+    line-height: 1em;
+    margin-bottom: 0.5rem;
+  }
 `;
 
-export const NeonBillboard: React.FC = () => {
-  return (
-    <Section>
-      <PrimaryHeading>Dayton Johnson</PrimaryHeading>
-      <SecondaryHeading>Web Developer</SecondaryHeading>
-    </Section>
-  );
-};
+const SecondaryHeading = styled.h1`
+  font: normal normal 28px/1em 'Permanent Marker', cursive;
+  animation: ${neonAnimation} 7s ease-in-out infinite alternate-reverse;
+
+  @media ${breakpoints.desktop} {
+    font-size: 48px;
+  }
+`;

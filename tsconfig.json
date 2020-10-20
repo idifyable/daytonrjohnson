@@ -22,7 +22,8 @@
       "@data/*": ["./src/data/*"],
       "@typeDefs/*": ["./src/types/*"],
       "@public/*": ["./public/*"],
-      "@lib/*": ["./src/lib/*"]
+      "@lib/*": ["./src/lib/*"],
+      "@constants/*": ["./src/constants/*"]
     }
   },
   "include": ["**/*.ts", "**/*.tsx", "next-env.d.ts", "next.config.js", "src/pages/index.tsx"],
