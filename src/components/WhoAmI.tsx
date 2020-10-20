@@ -18,7 +18,8 @@ export const WhoAmI: React.FC = () => {
               </p>
               <ul className="bulleted">
                 <li>HTML/CSS</li>
-                <li>JavaScript (Frontend)</li>
+                <li>JavaScript</li>
+                <li>Node.js</li>
                 <li>PHP</li>
               </ul>
             </div>
@@ -27,9 +28,10 @@ export const WhoAmI: React.FC = () => {
                 <strong>Growing Skills:</strong>
               </p>
               <ul className="bulleted">
-                <li>JavaScript (Backend)</li>
-                <li>Node.js</li>
-                <li>Linux Server Administration</li>
+                <li>TypeScript</li>
+                <li>ReactJS</li>
+                <li>React Mobile</li>
+                <li>Docker</li>
               </ul>
             </div>
           </div>
