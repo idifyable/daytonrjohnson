@@ -129,31 +129,6 @@ header > nav ul > li a:hover {
 }
 
 /****************************************
-* Neon Billboard
-****************************************/
-
-section.neon-billboard {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 5rem 0 7rem 0;
-  max-width: 100%;
-  color: white;
-  text-align: center;
-}
-
-section.neon-billboard h1 {
-  font: normal normal 80px/1em 'Permanent Marker', cursive;
-  animation: neon 7s ease-in-out infinite alternate;
-}
-
-section.neon-billboard h2 {
-  font: normal normal 48px/1em 'Permanent Marker', cursive;
-  animation: neon 7s ease-in-out infinite alternate-reverse;
-}
-
-/****************************************
 * About
 ****************************************/
 
