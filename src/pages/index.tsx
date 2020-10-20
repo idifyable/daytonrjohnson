@@ -1,11 +1,16 @@
+import { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
-import { NextPage } from 'next';
+import { getSortedProjectsData, Project } from '@lib/projects';
 import Layout, { siteTitle } from '@components/Layout';
 import { NeonBillboard } from '@components/NeonBillboard';
 import { WhoAmI } from '@components/WhoAmI';
-import { Projects } from '@components/Projects';
+import { ProjectsPreview } from '@components/ProjectsPreview/ProjectsPreview';
 
-const Home: NextPage = () => {
+interface Props {
+  allProjects: Project[];
+}
+
+const Home: NextPage<Props> = ({ allProjects }) => {
   return (
     <Layout home className="home">
       <Head>
@@ -13,9 +18,22 @@ const Home: NextPage = () => {
       </Head>
       <NeonBillboard />
       <WhoAmI />
-      <Projects />
+      <ProjectsPreview projectsData={allProjects} />
     </Layout>
   );
 };
 
+export const getStaticProps: GetStaticProps = async () => {
+  const allProjects = getSortedProjectsData();
+  return {
+    props: {
+      allProjects,
+    },
+  };
+};
+
 export default Home;
+
+interface Props {
+  allProjects: Project[];
+}
