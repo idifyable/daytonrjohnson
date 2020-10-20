@@ -1,4 +1,5 @@
 import { NextPage } from 'next';
+import 'normalize.css';
 import './styles/global.css';
 import './styles/site.css';
 import './styles/mobile.css';
