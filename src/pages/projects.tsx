@@ -1,8 +1,10 @@
 import Head from 'next/head';
 import { GetStaticProps, NextPage } from 'next';
-import Layout, { siteTitle } from '@components/Layout';
-import { MyProjects } from '@components/MyProjects/MyProjects';
 import { getSortedProjectsData, Project } from '@lib/projects';
+import Layout, { siteTitle } from '@components/Layout';
+import { Section } from '@components/primitives/Section';
+import { Container } from '@components/primitives/Container';
+import { ProjectsList } from '@components/ProjectsList/ProjectsList';
 
 interface Props {
   allProjects: Project[];
@@ -14,7 +16,11 @@ const Projects: NextPage<Props> = ({ allProjects }) => {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <MyProjects projectsData={allProjects} />
+      <Container>
+        <Section>
+          <ProjectsList projectsData={allProjects} />
+        </Section>
+      </Container>
     </Layout>
   );
 };
