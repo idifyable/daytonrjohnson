@@ -7,6 +7,7 @@ import { NeonBillboard } from '@components/NeonBillboard';
 import { WhoAmI } from '@components/WhoAmI';
 import { ProjectsPreview } from '@components/ProjectsPreview/ProjectsPreview';
 import { Container } from '@components/primitives/Container';
+import { Particles } from '@components/Particles';
 
 interface Props {
   allProjects: Project[];
@@ -23,6 +24,7 @@ const Home: NextPage<Props> = ({ allProjects }) => {
       <Head>
         <title>{siteTitle}</title>
       </Head>
+      <Particles />
       <NeonBillboard />
       <WhoAmI />
       <Container>
