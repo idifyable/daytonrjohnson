@@ -7,16 +7,12 @@ import { NeonBillboard } from '@components/NeonBillboard';
 import { WhoAmI } from '@components/WhoAmI';
 import { ProjectsPreview } from '@components/ProjectsPreview/ProjectsPreview';
 import { Container } from '@components/primitives/Container';
+import { Section } from '@components/primitives/Section';
 import { Particles } from '@components/Particles';
 
 interface Props {
   allProjects: Project[];
 }
-
-const Section = styled.div`
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-`;
 
 const Home: NextPage<Props> = ({ allProjects }) => {
   return (
