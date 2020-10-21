@@ -14,6 +14,7 @@
     "normalize.css": "^8.0.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
+    "react-tsparticles": "^1.18.5",
     "remark": "^12.0.0",
     "remark-html": "^12.0.0"
   },

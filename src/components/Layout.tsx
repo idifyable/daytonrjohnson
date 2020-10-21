@@ -1,7 +1,8 @@
 import Head from 'next/head';
 import { NextPage } from 'next';
-import { Header } from '@components/Header.tsx';
-import { Footer } from '@components/Footer.tsx';
+import { Header } from '@components/Header';
+import { Footer } from '@components/Footer';
+import { Particles } from '@components/Particles';
 
 const name = 'Dayton Johnson';
 export const siteTitle = 'Dayton Johnson | Web Developer';
@@ -30,6 +31,7 @@ const Layout: NextPage<Props> = ({ children, home, className }: Props) => {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
+      <Particles />
       <Header />
       <main>{children}</main>
       <Footer />
