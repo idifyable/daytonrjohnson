@@ -19,48 +19,6 @@
   }
 
   /****************************************
-  * About
-  ****************************************/
-
-  section.about > .container {
-    box-sizing: border-box;
-    display: block;
-    padding: 0 1.5rem;
-  }
-
-  section.about .container > img,
-  section.about .container > div {
-    width: 100%;
-  }
-
-  section.about .container > img {
-    align-self: flex-start;
-    bottom: 3rem;
-    margin: auto;
-    width: 100%;
-    max-width: 325px;
-  }
-
-  @media (max-width: 535px) {
-    section.about .container > div .skills {
-      display: block;
-    }
-
-    section.about .container > div .skills > div {
-      width: 100%;
-    }
-  }
-
-  /****************************************
-  * Buttons
-  ****************************************/
-
-  .button,
-  button {
-    padding: 0.6em;
-  }
-
-  /****************************************
   * Media Queries
   ****************************************/
 
