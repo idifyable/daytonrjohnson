@@ -23,7 +23,7 @@ export const ProjectsListItem: React.FC<Props> = ({ projectData }) => {
       <ContentWrapper>
         <ProjectTitleHeader>{projectData.title}</ProjectTitleHeader>
         {technologiesUsed && <TechnologiesUsedHeader>Technologies Used</TechnologiesUsedHeader>}
-        {technologiesUsed && <BulletedList>{technologiesUsed}</BulletedList>}
+        {technologiesUsed && <StyledBulletedList>{technologiesUsed}</StyledBulletedList>}
         {(projectData.demoUrl || projectData.repoUrl) && (
           <ButtonRow>
             {projectData.demoUrl && (
@@ -113,5 +113,9 @@ const ProjectTitleHeader = styled.h1`
 `;
 
 const TechnologiesUsedHeader = styled.h2`
+  margin-bottom: 1rem;
+`;
+
+const StyledBulletedList = styled(BulletedList)`
   margin-bottom: 1rem;
 `;

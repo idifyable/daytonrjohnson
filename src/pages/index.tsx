@@ -22,8 +22,10 @@ const Home: NextPage<Props> = ({ allProjects }) => {
       </Head>
       <Particles />
       <NeonBillboard />
-      <WhoAmI />
       <Container>
+        <Section>
+          <WhoAmI />
+        </Section>
         <Section>
           <ProjectsPreview projectsData={allProjects} />
         </Section>
@@ -42,7 +44,3 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 export default Home;
-
-interface Props {
-  allProjects: Project[];
-}
