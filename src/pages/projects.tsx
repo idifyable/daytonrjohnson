@@ -4,7 +4,7 @@ import { getSortedProjectsData, Project } from '@lib/projects';
 import Layout, { siteTitle } from '@components/Layout';
 import { Section } from '@components/primitives/Section';
 import { Container } from '@components/primitives/Container';
-import { ProjectsList } from '@components/ProjectsList/ProjectsList';
+import { ProjectsList } from '@components/ProjectsList';
 
 interface Props {
   allProjects: Project[];

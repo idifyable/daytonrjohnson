@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import * as S from './style';
 import { Project } from '@lib/projects';
-import { ProjectsListItem } from './ProjectsListItem/ProjectsListItem';
+import { ProjectsListItem } from './ProjectsListItem';
 
 interface Props {
   projectsData: Project[];
@@ -10,9 +10,6 @@ export const ProjectsList: React.FC<Props> = ({ projectsData }) => {
   const allProjects = projectsData.map((projectData) => {
     return <ProjectsListItem projectData={projectData} key={projectData.id} />;
   });
-  return <StyledProjectsList>{allProjects}</StyledProjectsList>;
-};
 
-const StyledProjectsList = styled.ul`
-  padding: 0;
-`;
+  return <S.StyledProjectsList>{allProjects}</S.StyledProjectsList>;
+};
