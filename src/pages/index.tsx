@@ -1,6 +1,5 @@
 import { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
-import styled from 'styled-components';
 import { getSortedProjectsData, Project } from '@lib/projects';
 import Layout, { siteTitle } from '@components/Layout';
 import { NeonBillboard } from '@components/NeonBillboard';
