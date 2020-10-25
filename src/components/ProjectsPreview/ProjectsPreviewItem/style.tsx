@@ -1,28 +1,7 @@
 import styled from 'styled-components';
-import { Project } from '@lib/projects';
-import Link from 'next/link';
 import { breakpoints } from '@constants/breakpoints';
 
-interface Props {
-  projectData: Project;
-}
-
-export const ProjectsPreviewItem: React.FC<Props> = ({ projectData }) => {
-  return (
-    <Container>
-      <Link href="/projects" passHref>
-        <a>
-          {projectData.image && (
-            <Image src={projectData.image} alt={projectData.title ? projectData.title : ''} />
-          )}
-          {projectData.title && <ProjectTitle>{projectData.title}</ProjectTitle>}
-        </a>
-      </Link>
-    </Container>
-  );
-};
-
-const Container = styled.li`
+export const Container = styled.li`
   position: relative;
   width: 100%;
   margin-bottom: 2rem;
@@ -45,7 +24,7 @@ const Container = styled.li`
   }
 `;
 
-const Image = styled.img`
+export const Image = styled.img`
   display: block;
   margin-right: auto;
   margin-left: auto;
@@ -55,7 +34,7 @@ const Image = styled.img`
   border: 4px solid #ffffff;
 `;
 
-const ProjectTitle = styled.p`
+export const ProjectTitle = styled.p`
   margin-bottom: 0;
   color: #10243c;
   font: normal bold 14px/1em 'Lato';
