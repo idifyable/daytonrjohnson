@@ -1,15 +1,7 @@
 import styled from 'styled-components';
 import { breakpoints } from '@constants/breakpoints';
 
-interface Props {
-  text: string;
-}
-
-export const Button: React.FC<Props> = ({ text }) => {
-  return <StyledButton>{text}</StyledButton>;
-};
-
-const StyledButton = styled.button`
+export const Button = styled.button`
   position: relative;
   padding: 0.6em;
   font-size: 18px;
