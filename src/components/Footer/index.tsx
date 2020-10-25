@@ -1,18 +1,13 @@
-import styled from 'styled-components';
+import * as S from './style';
 import { Container } from '@components/primitives/Container';
 import { SocialLinks } from '@components/SocialLinks';
 
 export const Footer: React.FC = () => {
   return (
-    <FooterWrapper>
+    <S.Footer>
       <Container>
         <SocialLinks />
       </Container>
-    </FooterWrapper>
+    </S.Footer>
   );
 };
-
-const FooterWrapper = styled.footer`
-  padding: 1rem 0;
-  background-color: #08111c;
-`;
