@@ -29,5 +29,6 @@ const ProjectsList = styled.ul`
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+  padding: 0;
   list-style: none;
 `;

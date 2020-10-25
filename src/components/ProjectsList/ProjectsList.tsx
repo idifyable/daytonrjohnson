@@ -10,5 +10,9 @@ export const ProjectsList: React.FC<Props> = ({ projectsData }) => {
   const allProjects = projectsData.map((projectData) => {
     return <ProjectsListItem projectData={projectData} key={projectData.id} />;
   });
-  return <ul>{allProjects}</ul>;
+  return <StyledProjectsList>{allProjects}</StyledProjectsList>;
 };
+
+const StyledProjectsList = styled.ul`
+  padding: 0;
+`;

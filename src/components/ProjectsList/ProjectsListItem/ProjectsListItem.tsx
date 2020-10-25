@@ -3,6 +3,8 @@ import { Project } from '@lib/projects';
 import { Button } from '@components/primitives/Button';
 import { breakpoints } from '@constants/breakpoints';
 import { BulletedList } from '@components/primitives/BulletedList';
+import { PrimaryHeading } from '@components/typography/PrimaryHeading';
+import { SecondaryHeading } from '@components/typography/SecondaryHeading';
 
 interface Props {
   projectData: Project;
@@ -107,12 +109,12 @@ const ButtonRow = styled.div`
   }
 `;
 
-const ProjectTitleHeader = styled.h1`
+const ProjectTitleHeader = styled(PrimaryHeading)`
   margin-top: 0;
   margin-bottom: 1rem;
 `;
 
-const TechnologiesUsedHeader = styled.h2`
+const TechnologiesUsedHeader = styled(SecondaryHeading)`
   margin-bottom: 1rem;
 `;
 

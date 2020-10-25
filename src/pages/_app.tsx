@@ -1,8 +1,8 @@
 import { NextPage } from 'next';
 import 'normalize.css';
-import './styles/global.css';
-import './styles/site.css';
-import './styles/mobile.css';
+import './styles/fonts.css';
+import { GlobalStyles } from '@components/styled/GlobalStyles';
+import React, { Fragment } from 'react';
 
 interface Props {
   Component: any;
@@ -10,7 +10,12 @@ interface Props {
 }
 
 const App: NextPage<Props> = ({ Component, pageProps }: Props) => {
-  return <Component {...pageProps} />;
+  return (
+    <Fragment>
+      <GlobalStyles />
+      <Component {...pageProps} />
+    </Fragment>
+  );
 };
 
 export default App;

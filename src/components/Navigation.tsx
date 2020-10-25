@@ -33,6 +33,7 @@ const NavigationContainer = styled.nav`
 const NavigationLinksList = styled.ul`
   display: flex;
   justify-content: space-between;
+  margin: 0;
   list-style: none;
 `;
 
