@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Container } from '@components/primitives/Container';
-import { SocialLinks } from './SocialLinks';
+import { SocialLinks } from '@components/SocialLinks';
 
 export const Footer: React.FC = () => {
   return (
