@@ -10,7 +10,11 @@ export const H4 = styled.h4``;
 export const H5 = styled.h5``;
 export const H6 = styled.h6``;
 export const P = styled.p``;
-export const Strong = styled.strong``;
+
+export const Strong = styled.strong`
+  font-weight: bold;
+`;
+
 export const BulletedList = styled.ul`
   padding-left: 20px;
   list-style: disc;

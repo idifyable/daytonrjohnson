@@ -2,8 +2,7 @@ import * as S from './style';
 import { PrimaryHeading } from '@components/typography/PrimaryHeading';
 import { SecondaryHeading } from '@components/typography/SecondaryHeading';
 import { Text } from '@components/typography/Text';
-import { Strong } from '@components/typography/Strong';
-import { BulletedList } from '@components/globals';
+import { BulletedList, Li, Strong } from '@components/globals';
 
 export const WhoAmI: React.FC = () => {
   return (
@@ -23,10 +22,10 @@ export const WhoAmI: React.FC = () => {
               <Strong>Strong Skills:</Strong>
             </Text>
             <BulletedList>
-              <li>HTML/CSS</li>
-              <li>JavaScript</li>
-              <li>Node.js</li>
-              <li>PHP</li>
+              <Li>HTML/CSS</Li>
+              <Li>JavaScript</Li>
+              <Li>Node.js</Li>
+              <Li>PHP</Li>
             </BulletedList>
           </S.SkillsWrapper>
           <S.SkillsWrapper>
@@ -34,10 +33,10 @@ export const WhoAmI: React.FC = () => {
               <Strong>Growing Skills:</Strong>
             </Text>
             <BulletedList>
-              <li>TypeScript</li>
-              <li>ReactJS</li>
-              <li>React Mobile</li>
-              <li>Docker</li>
+              <Li>TypeScript</Li>
+              <Li>ReactJS</Li>
+              <Li>React Mobile</Li>
+              <Li>Docker</Li>
             </BulletedList>
           </S.SkillsWrapper>
         </S.SkillsContainer>
