@@ -9,12 +9,12 @@ export const Navigation: React.FC = () => {
     <NavigationContainer>
       <NavigationLinksList>
         <NavigationLinksListItem>
-          <Link href="/">
+          <Link href="/" passHref>
             <NavigationLink active={router.pathname === '/'}>Home</NavigationLink>
           </Link>
         </NavigationLinksListItem>
         <NavigationLinksListItem>
-          <Link href="/projects/">
+          <Link href="/projects/" passHref>
             <NavigationLink active={router.pathname === '/projects'}>Projects</NavigationLink>
           </Link>
         </NavigationLinksListItem>
