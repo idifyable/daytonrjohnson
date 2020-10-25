@@ -11,3 +11,15 @@ export const H5 = styled.h5``;
 export const H6 = styled.h6``;
 export const P = styled.p``;
 export const Strong = styled.strong``;
+export const BulletedList = styled.ul`
+  padding-left: 20px;
+  list-style: disc;
+
+  & > li {
+    margin-bottom: 0.5em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+`;

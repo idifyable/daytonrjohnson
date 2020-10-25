@@ -3,7 +3,7 @@ import { PrimaryHeading } from '@components/typography/PrimaryHeading';
 import { SecondaryHeading } from '@components/typography/SecondaryHeading';
 import { Text } from '@components/typography/Text';
 import { Strong } from '@components/typography/Strong';
-import { BulletedList } from '@components/primitives/BulletedList';
+import { BulletedList } from '@components/globals';
 
 export const WhoAmI: React.FC = () => {
   return (

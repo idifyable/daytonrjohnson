@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Project } from '@lib/projects';
 import { Button } from '@components/primitives/Button';
 import { breakpoints } from '@constants/breakpoints';
-import { BulletedList } from '@components/primitives/BulletedList';
+import { BulletedList } from '@components/globals';
 import { PrimaryHeading } from '@components/typography/PrimaryHeading';
 import { SecondaryHeading } from '@components/typography/SecondaryHeading';
 
