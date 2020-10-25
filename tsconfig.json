@@ -23,6 +23,7 @@
       "@typeDefs/*": ["./src/types/*"],
       "@public/*": ["./public/*"],
       "@lib/*": ["./src/lib/*"],
+      "@styled/*": ["./src/styled/*"],
       "@constants/*": ["./src/constants/*"]
     }
   },
