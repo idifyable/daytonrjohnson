@@ -1,18 +1,7 @@
-import styled, { keyframes } from 'styled-components';
 import { breakpoints } from '@constants/breakpoints';
+import styled, { keyframes } from 'styled-components';
 
-export const NeonBillboard: React.FC = () => {
-  return (
-    <Section>
-      <Wrapper>
-        <PrimaryHeading>Dayton Johnson</PrimaryHeading>
-        <SecondaryHeading>Web Developer</SecondaryHeading>
-      </Wrapper>
-    </Section>
-  );
-};
-
-const Section = styled.section`
+export const Section = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,7 +16,7 @@ const Section = styled.section`
   }
 `;
 
-const neonAnimation = keyframes`
+export const neonAnimation = keyframes`
   0%,
   20% {
     text-shadow: none;
@@ -46,7 +35,7 @@ const neonAnimation = keyframes`
   }
 `;
 
-const PrimaryHeading = styled.h1`
+export const PrimaryHeading = styled.h1`
   margin: 0 0 0.5rem 0;
   color: white;
   font: normal normal 50px/1em 'Permanent Marker', cursive;
@@ -62,7 +51,7 @@ const PrimaryHeading = styled.h1`
   }
 `;
 
-const SecondaryHeading = styled.h1`
+export const SecondaryHeading = styled.h1`
   margin: 0;
   text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228dff, 0 0 35px #228dff,
     0 0 40px #228dff, 0 0 50px #228dff, 0 0 75px #228dff;
@@ -78,4 +67,4 @@ const SecondaryHeading = styled.h1`
   }
 `;
 
-const Wrapper = styled.div``;
+export const Wrapper = styled.div``;
