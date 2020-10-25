@@ -4,7 +4,7 @@ import { getSortedProjectsData, Project } from '@lib/projects';
 import Layout, { siteTitle } from '@components/Layout';
 import { NeonBillboard } from '@components/NeonBillboard';
 import { WhoAmI } from '@components/WhoAmI';
-import { ProjectsPreview } from '@components/ProjectsPreview/ProjectsPreview';
+import { ProjectsPreview } from '@components/ProjectsPreview';
 import { Container } from '@components/primitives/Container';
 import { Section } from '@components/primitives/Section';
 import { Particles } from '@components/Particles';
