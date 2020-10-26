@@ -11,6 +11,7 @@ export const LinksList = styled.ul`
   display: flex;
   justify-content: space-between;
   margin: 0;
+  padding: 0;
   list-style: none;
 `;
 
