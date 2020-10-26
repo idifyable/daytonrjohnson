@@ -2,11 +2,10 @@ import { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
 import { getSortedProjectsData, Project } from '@lib/projects';
 import Layout, { siteTitle } from '@components/Layout';
+import { Container, Section } from '@components/globals';
 import { NeonBillboard } from '@components/NeonBillboard';
 import { WhoAmI } from '@components/WhoAmI';
 import { ProjectsPreview } from '@components/ProjectsPreview';
-import { Container } from '@components/primitives/Container';
-import { Section } from '@components/primitives/Section';
 import { Particles } from '@components/Particles';
 
 interface Props {

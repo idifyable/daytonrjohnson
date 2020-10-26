@@ -2,8 +2,7 @@ import Head from 'next/head';
 import { GetStaticProps, NextPage } from 'next';
 import { getSortedProjectsData, Project } from '@lib/projects';
 import Layout, { siteTitle } from '@components/Layout';
-import { Section } from '@components/primitives/Section';
-import { Container } from '@components/primitives/Container';
+import { Container, Section } from '@components/globals';
 import { ProjectsList } from '@components/ProjectsList';
 
 interface Props {

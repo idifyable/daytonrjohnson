@@ -1,5 +1,5 @@
 import * as S from './style';
-import { Container } from '@components/primitives/Container';
+import { Container } from '@components/globals';
 import { SocialLinks } from '@components/SocialLinks';
 
 export const Footer: React.FC = () => {
