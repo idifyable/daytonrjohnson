@@ -1,21 +1,44 @@
+import { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
-import { NextPage } from 'next';
+import { getSortedProjectsData, Project } from '@lib/projects';
 import Layout, { siteTitle } from '@components/Layout';
+import { Container, Section } from '@components/globals';
 import { NeonBillboard } from '@components/NeonBillboard';
 import { WhoAmI } from '@components/WhoAmI';
-import { Projects } from '@components/Projects';
+import { ProjectsPreview } from '@components/ProjectsPreview';
+import { Particles } from '@components/Particles';
 
-const Home: NextPage = () => {
+interface Props {
+  allProjects: Project[];
+}
+
+const Home: NextPage<Props> = ({ allProjects }) => {
   return (
     <Layout home className="home">
       <Head>
         <title>{siteTitle}</title>
       </Head>
+      <Particles />
       <NeonBillboard />
-      <WhoAmI />
-      <Projects />
+      <Container>
+        <Section>
+          <WhoAmI />
+        </Section>
+        <Section>
+          <ProjectsPreview projectsData={allProjects} />
+        </Section>
+      </Container>
     </Layout>
   );
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+  const allProjects = getSortedProjectsData();
+  return {
+    props: {
+      allProjects,
+    },
+  };
 };
 
 export default Home;
