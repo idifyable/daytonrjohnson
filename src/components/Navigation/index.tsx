@@ -14,7 +14,7 @@ export const Navigation: React.FC = () => {
           </Link>
         </S.LinksListItem>
         <S.LinksListItem>
-          <Link href="/projects/" passHref>
+          <Link href="/projects" passHref>
             <S.Link active={router.pathname === '/projects'}>Projects</S.Link>
           </Link>
         </S.LinksListItem>
