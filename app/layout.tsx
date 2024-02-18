@@ -1,8 +1,20 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Permanent_Marker, Lato } from 'next/font/google';
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+const lato = Lato({
+  subsets: ['latin'],
+  weight: ['100', '300', '400', '700', '900'],
+  variable: '--font-lato',
+  display: 'swap',
+});
+
+const permanentMarker = Permanent_Marker({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-permanent-marker',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: 'Dayton Johnson | Web Developer',
@@ -23,7 +35,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={`${lato.variable} ${permanentMarker.variable} ${lato.className}`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
