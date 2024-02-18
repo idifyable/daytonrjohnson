@@ -14,10 +14,9 @@ export default function AboutMe() {
         <h3 className="text-4xl mb-6">Who Am I?</h3>
         <h2 className="text-2xl mb-6">Web Developer</h2>
         <p className="mb-6">
-          Hello, I'm a web developer based in Eau Claire, Wisconsin. I'm
-          passionate in coding and creating useful web-based software. I love
-          learning new technologies and am focused on becoming a master of the
-          web platform.
+          {
+            "Hello, I'm a web developer based in Eau Claire, Wisconsin. I'm passionate in coding and creating useful web-based software. I love learning new technologies and am focused on becoming a master of the web platform."
+          }
         </p>
         <div className="md:flex md:space-x-40">
           <div className="mb-3 md:mb-0">
