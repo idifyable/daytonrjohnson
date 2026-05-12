@@ -10,12 +10,15 @@ const JOBS = [
   {
     company: 'HubSpot',
     url: 'https://www.hubspot.com',
-    title: 'Senior Software Engineer, Commerce',
+    title: 'Senior Software Engineer, Commerce Platform',
     range: 'Aug 2022 – Present',
     bullets: [
-      'Engineering core commerce features across Commerce Hub — payments, invoices, quotes, discount codes, and billing tooling used by thousands of SMBs.',
-      'Contributed to the public launch of Commerce Hub at INBOUND, enabling streamlined billing and revenue workflows for HubSpot customers.',
-      'Collaborate cross-functionally with product, design, and GTM to ship high-impact features end-to-end.',
+      "Senior engineer in HubSpot's Commerce org, owning frontend architecture across a large multi-repo system spanning pricing, line items, discounts, and product bundles.",
+      'Led end-to-end delivery of tiered pricing across a complex multi-repo system, driving architectural decisions, resolving dependency challenges, and coordinating across teams to ship at scale.',
+      'Independently designed and built the Bundle Item Edit Panel, owning state management architecture, product logic, and multicurrency integration.',
+      'Served as frontend DRI for Discount Codes Enhancements, owning requirements alignment with backend and full implementation independently.',
+      'Drove Line Item Field-Level Permissions to rollout under critical production conditions, coordinating across multiple teams and frontend surfaces.',
+      'Authored RFCs, technical explainers, and cross-team planning artifacts.',
     ],
   },
   {
@@ -30,7 +33,7 @@ const JOBS = [
   },
   {
     company: 'Entropy Multimedia',
-    url: '#',
+    url: 'https://entropy.cc/',
     title: 'Full Stack JavaScript Developer',
     range: 'Mar 2019 – Feb 2021',
     bullets: [
@@ -40,7 +43,7 @@ const JOBS = [
   },
   {
     company: 'First Net Impressions',
-    url: '#',
+    url: 'https://www.firstnetimpressions.com/',
     title: 'Lead Full Stack Web Developer',
     range: 'Apr 2017 – Mar 2019',
     bullets: [
@@ -51,11 +54,12 @@ const JOBS = [
   {
     company: 'Appreciate The Discrete',
     url: '#',
-    title: 'Founder',
+    title: 'Founder & Software Engineer',
     range: 'Jun 2016 – Present',
     bullets: [
-      'Indie software venture — freelance web development, SaaS products, and software experiments.',
-      'Currently building Posing Perfect, a coaching SaaS for competitive bodybuilders.',
+      'Founded and operate a software consultancy and product development LLC. Currently building two SaaS products as sole engineer and product owner.',
+      'Posing Perfect: a full-stack platform for bodybuilding coaches and athletes. I own product, architecture, backend (Supabase/PostgreSQL), frontend (Next.js/React), auth, testing (Cypress), and deployment (Vercel).',
+      'Career Iterator: an AI-powered career management tool, built as sole engineer.',
     ],
   },
 ];

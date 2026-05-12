@@ -7,11 +7,11 @@ import InlineLink from './ui/InlineLink';
 import { Arrow, BulletItem } from './ui/BulletItem';
 
 const FACTS = [
-  'Self-taught — FreeCodeCamp to Senior SWE',
-  'Passionate about developer mentorship',
+  'Self-taught from the start',
+  "Comfortable going deep on things I don't know yet",
   'Dabbles in embedded synthesizer development',
   "Competed in Men's Physique bodybuilding (Top 3 in debut)",
-  'Based in Chippewa Falls, WI',
+  'Open to senior remote roles',
 ];
 
 export default function About() {
@@ -20,14 +20,11 @@ export default function About() {
       <Grid>
         <Bio>
           <p>
-            I make software. I develop websites, web apps, and mobile apps — and
-            I love the full arc of the process: understanding the problem,
-            designing the solution, shipping it, and iterating.
+            I make software. Production SaaS, complex frontend systems at scale,
+            and everything in between.
           </p>
           <p>
-            I&apos;ve been building on the web for nearly a decade, starting as
-            a self-taught developer and growing into senior engineering roles at
-            companies like{' '}
+            By day I&apos;m a senior engineer at{' '}
             <InlineLink
               href="https://www.hubspot.com"
               target="_blank"
@@ -35,21 +32,23 @@ export default function About() {
             >
               HubSpot
             </InlineLink>{' '}
-            and WebMD. I care deeply about developing the people around me as
-            much as the products we build together.
+            in the Commerce org. I own architecture,
+            cross-team coordination, and delivery across complex, large-scale
+            frontend systems. I write RFCs, take ownership seriously, and care a
+            lot about the systems I leave behind.
           </p>
           <p>
-            Outside of work I run{' '}
+            On the side, I&apos;m building two SaaS products from scratch as
+            sole engineer:{' '}
             <InlineLink
-              href="https://github.com/idifyable"
+              href="https://posingperfect.com"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Appreciate The Discrete
+              Posing Perfect
             </InlineLink>
-            , my indie software venture, where I explore ideas at the
-            intersection of software and the physical world — from SaaS products
-            to embedded synthesizer experiments.
+            , a platform for bodybuilding coaches and athletes, and Career
+            Iterator, an AI-powered career management tool.
           </p>
         </Bio>
         <FactList>

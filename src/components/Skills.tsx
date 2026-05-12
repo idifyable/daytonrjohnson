@@ -12,21 +12,15 @@ const SKILL_GROUPS = [
   },
   {
     label: 'Frontend',
-    skills: [
-      'React',
-      'Next.js',
-      'React Native',
-      'styled-components',
-      'GraphQL',
-    ],
+    skills: ['React', 'Next.js', 'React Native'],
   },
   {
     label: 'Backend & Infra',
-    skills: ['Node.js', 'Supabase', 'REST APIs', 'Docker', 'Vercel'],
+    skills: ['Node.js', 'PostgreSQL', 'Supabase', 'REST', 'GraphQL', 'Docker'],
   },
   {
-    label: 'Tooling',
-    skills: ['Git', 'GitHub', 'Linear', 'Cypress', 'Webpack'],
+    label: 'Tooling & Process',
+    skills: ['Cypress', 'System Design', 'Git', 'GitHub', 'Linear'],
   },
 ];
 

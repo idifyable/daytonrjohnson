@@ -12,8 +12,7 @@ export default function Hero() {
         <Name>Dayton Johnson.</Name>
         <Tagline>I make software.</Tagline>
         <Description>
-          Senior Software Engineer with ~10 years of experience taking ideas
-          from concept to production. Currently building commerce tooling at{' '}
+          Senior engineer at{' '}
           <InlineLink
             href="https://www.hubspot.com"
             target="_blank"
@@ -21,16 +20,17 @@ export default function Hero() {
           >
             HubSpot
           </InlineLink>{' '}
-          and indie SaaS at{' '}
+          in Commerce, owning core frontend architecture across line items,
+          products, and pricing. On the side, I build two SaaS products as sole
+          engineer:{' '}
           <InlineLink
-            href="https://github.com/idifyable"
+            href="https://posingperfect.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Appreciate The Discrete
-          </InlineLink>
-          . Passionate about the modern web platform, developer craft, and
-          shipping things that matter.
+            Posing Perfect
+          </InlineLink>{' '}
+          and Career Iterator. I move fast and go deep.
         </Description>
         <CTAs>
           <PrimaryBtn href="#projects">See my work</PrimaryBtn>
