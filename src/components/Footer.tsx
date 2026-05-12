@@ -8,7 +8,6 @@ export default function Footer() {
     <FooterEl>
       <Inner>
         <span>Designed & built by Dayton Johnson</span>
-        <span>Next.js · styled-components</span>
       </Inner>
     </FooterEl>
   )
