@@ -14,8 +14,8 @@ export default function Contact() {
           engagements, and conversations with other builders. If you&apos;ve got
           something worth talking about, reach out.
         </Body>
-        <EmailLink href="mailto:dayton@daytonrjohnson.com">
-          dayton@daytonrjohnson.com
+        <EmailLink href="mailto:dayton@appreciatethediscrete.com">
+          dayton@appreciatethediscrete.com
         </EmailLink>
         <SocialLinks>
           <SocialLink href="https://github.com/idifyable" target="_blank" rel="noopener noreferrer">
