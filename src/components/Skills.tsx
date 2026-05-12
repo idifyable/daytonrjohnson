@@ -1,8 +1,9 @@
-'use client'
+'use client';
 
-import styled from 'styled-components'
-import { theme } from '@/styles/theme'
-import SectionWrapper from './SectionWrapper'
+import styled from 'styled-components';
+import { theme } from '@/styles/theme';
+import SectionWrapper from './SectionWrapper';
+import { TagList, SkillTag } from './ui/TagList';
 
 const SKILL_GROUPS = [
   {
@@ -11,7 +12,13 @@ const SKILL_GROUPS = [
   },
   {
     label: 'Frontend',
-    skills: ['React', 'Next.js', 'React Native', 'styled-components', 'GraphQL'],
+    skills: [
+      'React',
+      'Next.js',
+      'React Native',
+      'styled-components',
+      'GraphQL',
+    ],
   },
   {
     label: 'Backend & Infra',
@@ -21,7 +28,7 @@ const SKILL_GROUPS = [
     label: 'Tooling',
     skills: ['Git', 'GitHub', 'Linear', 'Cypress', 'Webpack'],
   },
-]
+];
 
 export default function Skills() {
   return (
@@ -30,29 +37,29 @@ export default function Skills() {
         {SKILL_GROUPS.map((group) => (
           <Group key={group.label}>
             <GroupLabel>{group.label}</GroupLabel>
-            <SkillList>
+            <TagList>
               {group.skills.map((skill) => (
                 <SkillTag key={skill}>{skill}</SkillTag>
               ))}
-            </SkillList>
+            </TagList>
           </Group>
         ))}
       </Grid>
     </SectionWrapper>
-  )
+  );
 }
 
 const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 32px;
-`
+`;
 
 const Group = styled.div`
   display: flex;
   flex-direction: column;
   gap: 12px;
-`
+`;
 
 const GroupLabel = styled.h3`
   font-family: ${theme.fonts.mono};
@@ -60,25 +67,4 @@ const GroupLabel = styled.h3`
   color: ${theme.colors.accent};
   letter-spacing: 0.08em;
   text-transform: uppercase;
-`
-
-const SkillList = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-`
-
-const SkillTag = styled.span`
-  font-size: 0.875rem;
-  color: ${theme.colors.textMuted};
-  background: ${theme.colors.surface};
-  border: 1px solid ${theme.colors.border};
-  padding: 5px 12px;
-  border-radius: 4px;
-  transition: color 0.2s, border-color 0.2s;
-
-  &:hover {
-    color: ${theme.colors.text};
-    border-color: ${theme.colors.borderHover};
-  }
-`
+`;

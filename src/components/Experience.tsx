@@ -1,9 +1,10 @@
-'use client'
+'use client';
 
-import { useState } from 'react'
-import styled from 'styled-components'
-import { theme } from '@/styles/theme'
-import SectionWrapper from './SectionWrapper'
+import { useState } from 'react';
+import styled from 'styled-components';
+import { theme } from '@/styles/theme';
+import SectionWrapper from './SectionWrapper';
+import { Arrow, BulletItem } from './ui/BulletItem';
 
 const JOBS = [
   {
@@ -57,11 +58,11 @@ const JOBS = [
       'Currently building Posing Perfect, a coaching SaaS for competitive bodybuilders.',
     ],
   },
-]
+];
 
 export default function Experience() {
-  const [activeIdx, setActiveIdx] = useState(0)
-  const job = JOBS[activeIdx]
+  const [activeIdx, setActiveIdx] = useState(0);
+  const job = JOBS[activeIdx];
 
   return (
     <SectionWrapper id="experience" label="Experience">
@@ -94,7 +95,7 @@ export default function Experience() {
           <Bullets>
             {job.bullets.map((b) => (
               <BulletItem key={b}>
-                <Arrow>▸</Arrow>
+                <Arrow $marginTop="3px">▸</Arrow>
                 <span>{b}</span>
               </BulletItem>
             ))}
@@ -102,7 +103,7 @@ export default function Experience() {
         </Panel>
       </Layout>
     </SectionWrapper>
-  )
+  );
 }
 
 const Layout = styled.div`
@@ -114,7 +115,7 @@ const Layout = styled.div`
     flex-direction: column;
     gap: 24px;
   }
-`
+`;
 
 const TabList = styled.div`
   display: flex;
@@ -128,19 +129,24 @@ const TabList = styled.div`
     border-left: none;
     border-bottom: 1px solid ${theme.colors.border};
   }
-`
+`;
 
 const Tab = styled.button<{ $active: boolean }>`
   padding: 12px 20px;
   font-size: 0.85rem;
   font-family: ${theme.fonts.mono};
   text-align: left;
-  color: ${({ $active }) => ($active ? theme.colors.accent : theme.colors.textMuted)};
-  background: ${({ $active }) => ($active ? theme.colors.accentDim : 'transparent')};
+  color: ${({ $active }) =>
+    $active ? theme.colors.accent : theme.colors.textMuted};
+  background: ${({ $active }) =>
+    $active ? theme.colors.accentDim : 'transparent'};
   border-left: 2px solid
     ${({ $active }) => ($active ? theme.colors.accent : 'transparent')};
   margin-left: -1px;
-  transition: color 0.2s, background 0.2s, border-color 0.2s;
+  transition:
+    color 0.2s,
+    background 0.2s,
+    border-color 0.2s;
   white-space: nowrap;
 
   &:hover {
@@ -155,19 +161,19 @@ const Tab = styled.button<{ $active: boolean }>`
     margin-left: 0;
     margin-bottom: -1px;
   }
-`
+`;
 
 const Panel = styled.div`
   flex: 1;
   min-height: 200px;
-`
+`;
 
 const JobTitle = styled.h3`
   font-size: 1.05rem;
   font-weight: 500;
   color: ${theme.colors.text};
   margin-bottom: 6px;
-`
+`;
 
 const CompanyLink = styled.a`
   color: ${theme.colors.accent};
@@ -176,32 +182,18 @@ const CompanyLink = styled.a`
   &:hover {
     opacity: 0.75;
   }
-`
+`;
 
 const Range = styled.p`
   font-family: ${theme.fonts.mono};
   font-size: 0.8rem;
   color: ${theme.colors.textMuted};
   margin-bottom: 24px;
-`
+`;
 
 const Bullets = styled.ul`
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 14px;
-`
-
-const BulletItem = styled.li`
-  display: flex;
-  gap: 12px;
-  font-size: 0.95rem;
-  color: ${theme.colors.textMuted};
-  line-height: 1.7;
-`
-
-const Arrow = styled.span`
-  color: ${theme.colors.accent};
-  flex-shrink: 0;
-  margin-top: 3px;
-`
+`;
