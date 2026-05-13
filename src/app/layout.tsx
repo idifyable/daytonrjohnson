@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: 'Dayton Johnson — Software Engineer',
   description:
     'Senior Software Engineer specializing in full-stack web development. I take ideas from concept to production.',
+  icons: {
+    apple: '/apple-touch-icon.png',
+  },
   openGraph: {
     title: 'Dayton Johnson — Software Engineer',
     description: 'Senior Software Engineer specializing in full-stack web development.',
