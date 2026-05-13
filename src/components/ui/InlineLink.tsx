@@ -11,8 +11,8 @@ const InlineLink = styled.a`
     border-color 0.2s;
 
   &:hover {
-    color: ${theme.colors.accent};
-    border-color: ${theme.colors.accent};
+    color: ${theme.colors.phosphor};
+    border-color: ${theme.colors.phosphor};
   }
 `;
 

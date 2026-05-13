@@ -4,7 +4,6 @@ import { useState } from 'react';
 import styled from 'styled-components';
 import { theme } from '@/styles/theme';
 import SectionWrapper from './SectionWrapper';
-import { Arrow, BulletItem } from './ui/BulletItem';
 
 const JOBS = [
   {
@@ -13,8 +12,8 @@ const JOBS = [
     title: 'Senior Software Engineer, Commerce Platform',
     range: 'Aug 2022 – Present',
     bullets: [
-      "Senior engineer in HubSpot's Commerce org, owning frontend architecture across a large multi-repo system spanning pricing, line items, discounts, and product bundles.",
-      'Led end-to-end delivery of tiered pricing across a complex multi-repo system, driving architectural decisions, resolving dependency challenges, and coordinating across teams to ship at scale.',
+      "Senior engineer in HubSpot's Commerce org, owning frontend architecture across pricing, line items, discounts, and product bundles.",
+      'Led end-to-end delivery of tiered pricing across a complex multi-repo system — architectural decisions, dependency resolution, cross-team coordination.',
       'Independently designed and built the Bundle Item Edit Panel, owning state management architecture, product logic, and multicurrency integration.',
       'Served as frontend DRI for Discount Codes Enhancements, owning requirements alignment with backend and full implementation independently.',
       'Drove Line Item Field-Level Permissions to rollout under critical production conditions, coordinating across multiple teams and frontend surfaces.',
@@ -27,12 +26,12 @@ const JOBS = [
     title: 'Senior Software Engineer',
     range: 'Feb 2021 – Aug 2022',
     bullets: [
-      'Senior frontend engineer on consumer-facing health content and tooling reaching millions of users monthly.',
-      'Led frontend architecture decisions and mentored junior engineers on the team.',
+      'Senior frontend engineer on consumer health content and tooling reaching millions of users monthly.',
+      'Led frontend architecture decisions and mentored junior engineers.',
     ],
   },
   {
-    company: 'Entropy Multimedia',
+    company: 'Entropy',
     url: 'https://entropy.cc/',
     title: 'Full Stack JavaScript Developer',
     range: 'Mar 2019 – Feb 2021',
@@ -52,13 +51,13 @@ const JOBS = [
     ],
   },
   {
-    company: 'Appreciate The Discrete',
+    company: 'ATD',
     url: '#',
     title: 'Founder & Software Engineer',
     range: 'Jun 2016 – Present',
     bullets: [
-      'Founded and operate a software consultancy and product development LLC. Currently building two SaaS products as sole engineer and product owner.',
-      'Posing Perfect: a full-stack platform for bodybuilding coaches and athletes. I own product, architecture, backend (Supabase/PostgreSQL), frontend (Next.js/React), auth, testing (Cypress), and deployment (Vercel).',
+      'Founded and operate Appreciate The Discrete — a software consultancy and product development LLC.',
+      'Posing Perfect: full-stack platform for bodybuilding coaches and athletes (Next.js, Supabase, Vercel). I own product, architecture, and all engineering.',
       'Career Iterator: an AI-powered career management tool, built as sole engineer.',
     ],
   },
@@ -71,37 +70,41 @@ export default function Experience() {
   return (
     <SectionWrapper id="experience" label="Experience">
       <Layout>
-        <TabList role="tablist">
+        <ChannelList role="tablist">
           {JOBS.map((j, i) => (
-            <Tab
+            <Channel
               key={j.company}
               role="tab"
               aria-selected={i === activeIdx}
               $active={i === activeIdx}
               onClick={() => setActiveIdx(i)}
             >
-              {j.company}
-            </Tab>
+              <ChannelLed $active={i === activeIdx} />
+              <ChannelName $active={i === activeIdx}>{j.company}</ChannelName>
+            </Channel>
           ))}
-        </TabList>
+        </ChannelList>
+
         <Panel role="tabpanel">
-          <JobTitle>
-            {job.title}{' '}
-            <CompanyLink
-              href={job.url}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              @ {job.company}
-            </CompanyLink>
-          </JobTitle>
-          <Range>{job.range}</Range>
+          <PanelHeader>
+            <JobTitle>
+              {job.title}{' '}
+              <CompanyLink
+                href={job.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                @ {job.company}
+              </CompanyLink>
+            </JobTitle>
+            <Range>{job.range}</Range>
+          </PanelHeader>
           <Bullets>
             {job.bullets.map((b) => (
-              <BulletItem key={b}>
-                <Arrow $marginTop="3px">▸</Arrow>
+              <BulletRow key={b}>
+                <BulletMark>▸</BulletMark>
                 <span>{b}</span>
-              </BulletItem>
+              </BulletRow>
             ))}
           </Bullets>
         </Panel>
@@ -112,75 +115,113 @@ export default function Experience() {
 
 const Layout = styled.div`
   display: flex;
-  gap: 40px;
+  gap: 0;
   align-items: flex-start;
 
   @media (max-width: ${theme.breakpoints.sm}) {
     flex-direction: column;
-    gap: 24px;
   }
 `;
 
-const TabList = styled.div`
+const ChannelList = styled.div`
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
-  border-left: 1px solid ${theme.colors.border};
+  width: 180px;
+  border-right: 1px solid ${theme.colors.border};
 
   @media (max-width: ${theme.breakpoints.sm}) {
     flex-direction: row;
     flex-wrap: wrap;
-    border-left: none;
+    width: 100%;
+    border-right: none;
     border-bottom: 1px solid ${theme.colors.border};
+    margin-bottom: 32px;
   }
 `;
 
-const Tab = styled.button<{ $active: boolean }>`
-  padding: 12px 20px;
-  font-size: 0.85rem;
-  font-family: ${theme.fonts.mono};
+const Channel = styled.button<{ $active: boolean }>`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 16px 13px 12px;
   text-align: left;
-  color: ${({ $active }) =>
-    $active ? theme.colors.accent : theme.colors.textMuted};
+  width: 100%;
   background: ${({ $active }) =>
-    $active ? theme.colors.accentDim : 'transparent'};
-  border-left: 2px solid
-    ${({ $active }) => ($active ? theme.colors.accent : 'transparent')};
-  margin-left: -1px;
-  transition:
-    color 0.2s,
-    background 0.2s,
-    border-color 0.2s;
-  white-space: nowrap;
+    $active ? theme.colors.surface : 'transparent'};
+  border-right: 2px solid
+    ${({ $active }) => ($active ? theme.colors.phosphor : 'transparent')};
+  margin-right: -1px;
+  transition: background 0.2s;
 
   &:hover {
-    color: ${theme.colors.text};
     background: ${theme.colors.surfaceHover};
   }
 
   @media (max-width: ${theme.breakpoints.sm}) {
-    border-left: none;
+    border-right: none;
     border-bottom: 2px solid
-      ${({ $active }) => ($active ? theme.colors.accent : 'transparent')};
-    margin-left: 0;
+      ${({ $active }) => ($active ? theme.colors.phosphor : 'transparent')};
+    margin-right: 0;
     margin-bottom: -1px;
+    width: auto;
+    padding: 10px 14px;
+  }
+`;
+
+const ChannelLed = styled.div<{ $active: boolean }>`
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: ${({ $active }) =>
+    $active ? theme.colors.phosphor : theme.colors.border};
+  box-shadow: ${({ $active }) =>
+    $active ? `0 0 5px ${theme.colors.phosphorGlow}` : 'none'};
+  transition:
+    background 0.2s,
+    box-shadow 0.2s;
+`;
+
+const ChannelName = styled.span<{ $active: boolean }>`
+  font-family: ${theme.fonts.mono};
+  font-size: 0.76rem;
+  color: ${({ $active }) =>
+    $active ? theme.colors.text : theme.colors.textMuted};
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.2s;
+
+  button:hover & {
+    color: ${theme.colors.text};
   }
 `;
 
 const Panel = styled.div`
   flex: 1;
-  min-height: 200px;
+  padding-left: 40px;
+  min-height: 260px;
+
+  @media (max-width: ${theme.breakpoints.sm}) {
+    padding-left: 0;
+  }
+`;
+
+const PanelHeader = styled.div`
+  margin-bottom: 28px;
 `;
 
 const JobTitle = styled.h3`
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 500;
   color: ${theme.colors.text};
-  margin-bottom: 6px;
+  margin-bottom: 8px;
+  line-height: 1.5;
 `;
 
 const CompanyLink = styled.a`
-  color: ${theme.colors.accent};
+  color: ${theme.colors.phosphor};
   transition: opacity 0.2s;
 
   &:hover {
@@ -190,9 +231,9 @@ const CompanyLink = styled.a`
 
 const Range = styled.p`
   font-family: ${theme.fonts.mono};
-  font-size: 0.8rem;
+  font-size: 0.76rem;
   color: ${theme.colors.textMuted};
-  margin-bottom: 24px;
+  letter-spacing: 0.02em;
 `;
 
 const Bullets = styled.ul`
@@ -200,4 +241,19 @@ const Bullets = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 14px;
+`;
+
+const BulletRow = styled.li`
+  display: flex;
+  gap: 12px;
+  font-size: 0.925rem;
+  color: ${theme.colors.textMuted};
+  line-height: 1.72;
+`;
+
+const BulletMark = styled.span`
+  color: ${theme.colors.phosphor};
+  flex-shrink: 0;
+  margin-top: 3px;
+  font-size: 0.8rem;
 `;

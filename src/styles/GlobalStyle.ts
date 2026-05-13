@@ -35,12 +35,12 @@ const GlobalStyle = createGlobalStyle`
   }
 
   ::selection {
-    background: ${theme.colors.accentGlow};
-    color: ${theme.colors.accent};
+    background: ${theme.colors.phosphorGlow};
+    color: ${theme.colors.phosphor};
   }
 
   ::-webkit-scrollbar {
-    width: 6px;
+    width: 4px;
   }
 
   ::-webkit-scrollbar-track {
@@ -49,7 +49,11 @@ const GlobalStyle = createGlobalStyle`
 
   ::-webkit-scrollbar-thumb {
     background: ${theme.colors.border};
-    border-radius: 3px;
+    border-radius: 2px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: ${theme.colors.phosphor};
   }
 `
 

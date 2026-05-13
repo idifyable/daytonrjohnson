@@ -16,27 +16,20 @@ export default function Nav() {
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
-    window.addEventListener('scroll', onScroll)
+    window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
   return (
     <NavBar $scrolled={scrolled}>
       <NavInner>
-        <Logo href="#">DJ</Logo>
+        <Logo href="#">DJ.</Logo>
         <NavLinks>
           {NAV_LINKS.map((link) => (
             <NavLink key={link.href} href={link.href}>
               {link.label}
             </NavLink>
           ))}
-          <ResumeLink
-            href="/resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Resume
-          </ResumeLink>
         </NavLinks>
       </NavInner>
     </NavBar>
@@ -50,10 +43,12 @@ const NavBar = styled.nav<{ $scrolled: boolean }>`
   right: 0;
   z-index: 100;
   height: ${theme.navHeight};
-  transition: background 0.3s ease, border-color 0.3s ease;
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease;
   background: ${({ $scrolled }) =>
-    $scrolled ? 'rgba(8, 8, 8, 0.92)' : 'transparent'};
-  backdrop-filter: ${({ $scrolled }) => ($scrolled ? 'blur(12px)' : 'none')};
+    $scrolled ? 'rgba(8, 8, 6, 0.94)' : 'transparent'};
+  backdrop-filter: ${({ $scrolled }) => ($scrolled ? 'blur(16px)' : 'none')};
   border-bottom: 1px solid
     ${({ $scrolled }) => ($scrolled ? theme.colors.border : 'transparent')};
 `
@@ -69,43 +64,58 @@ const NavInner = styled.div`
 `
 
 const Logo = styled.a`
-  font-family: ${theme.fonts.mono};
-  font-size: 1rem;
-  font-weight: 500;
-  color: ${theme.colors.accent};
-  letter-spacing: 0.05em;
-  transition: opacity 0.2s;
+  font-family: ${theme.fonts.display};
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: ${theme.colors.text};
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  line-height: 1;
+  transition: color 0.2s;
 
   &:hover {
-    opacity: 0.7;
+    color: ${theme.colors.phosphor};
   }
 `
 
 const NavLinks = styled.div`
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 28px;
+
+  @media (max-width: ${theme.breakpoints.sm}) {
+    gap: 16px;
+  }
 `
 
 const NavLink = styled.a`
-  font-size: 0.875rem;
+  font-family: ${theme.fonts.mono};
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
   color: ${theme.colors.textMuted};
   transition: color 0.2s;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: ${theme.colors.phosphor};
+    transition: width 0.25s ease;
+  }
 
   &:hover {
     color: ${theme.colors.text};
   }
-`
 
-const ResumeLink = styled.a`
-  font-size: 0.875rem;
-  color: ${theme.colors.accent};
-  border: 1px solid ${theme.colors.accent};
-  padding: 6px 14px;
-  border-radius: 4px;
-  transition: background 0.2s, color 0.2s;
+  &:hover::after {
+    width: 100%;
+  }
 
-  &:hover {
-    background: ${theme.colors.accentDim};
+  @media (max-width: ${theme.breakpoints.sm}) {
+    display: none;
   }
 `

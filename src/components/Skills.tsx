@@ -3,7 +3,6 @@
 import styled from 'styled-components';
 import { theme } from '@/styles/theme';
 import SectionWrapper from './SectionWrapper';
-import { TagList, SkillTag } from './ui/TagList';
 
 const SKILL_GROUPS = [
   {
@@ -27,38 +26,62 @@ const SKILL_GROUPS = [
 export default function Skills() {
   return (
     <SectionWrapper id="skills" label="Skills">
-      <Grid>
+      <SkillGrid>
         {SKILL_GROUPS.map((group) => (
-          <Group key={group.label}>
+          <SkillGroup key={group.label}>
             <GroupLabel>{group.label}</GroupLabel>
-            <TagList>
+            <TagRow>
               {group.skills.map((skill) => (
                 <SkillTag key={skill}>{skill}</SkillTag>
               ))}
-            </TagList>
-          </Group>
+            </TagRow>
+          </SkillGroup>
         ))}
-      </Grid>
+      </SkillGrid>
     </SectionWrapper>
   );
 }
 
-const Grid = styled.div`
+const SkillGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 32px;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 36px;
 `;
 
-const Group = styled.div`
+const SkillGroup = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 `;
 
 const GroupLabel = styled.h3`
   font-family: ${theme.fonts.mono};
-  font-size: 0.8rem;
-  color: ${theme.colors.accent};
-  letter-spacing: 0.08em;
+  font-size: 0.7rem;
+  color: ${theme.colors.phosphor};
+  letter-spacing: 0.12em;
   text-transform: uppercase;
+`;
+
+const TagRow = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+`;
+
+const SkillTag = styled.span`
+  font-family: ${theme.fonts.mono};
+  font-size: 0.72rem;
+  color: ${theme.colors.textMuted};
+  background: ${theme.colors.surface};
+  border: 1px solid ${theme.colors.border};
+  padding: 3px 10px;
+  letter-spacing: 0.03em;
+  transition:
+    color 0.2s,
+    border-color 0.2s;
+
+  &:hover {
+    color: ${theme.colors.text};
+    border-color: ${theme.colors.phosphor};
+  }
 `;

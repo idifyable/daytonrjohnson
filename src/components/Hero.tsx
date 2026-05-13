@@ -7,10 +7,18 @@ import InlineLink from './ui/InlineLink';
 export default function Hero() {
   return (
     <Section>
+      <Waveform aria-hidden="true">
+        <WaveScroller>
+          <WaveSvg />
+          <WaveSvg />
+        </WaveScroller>
+      </Waveform>
       <Inner>
-        <Eyebrow>Hey, I&apos;m</Eyebrow>
-        <Name>Dayton Johnson.</Name>
-        <Tagline>I make software.</Tagline>
+        <Name>
+          <NameLine>DAYTON</NameLine>
+          <NameLine>JOHNSON.</NameLine>
+        </Name>
+        <Tagline>Systems Builder. Frontend Architect.</Tagline>
         <Description>
           Senior engineer at{' '}
           <InlineLink
@@ -20,9 +28,8 @@ export default function Hero() {
           >
             HubSpot
           </InlineLink>{' '}
-          in Commerce, owning core frontend architecture across line items,
-          products, and pricing. On the side, I build two SaaS products as sole
-          engineer:{' '}
+          owning core frontend architecture across Commerce. On the side,
+          building{' '}
           <InlineLink
             href="https://posingperfect.com"
             target="_blank"
@@ -30,7 +37,7 @@ export default function Hero() {
           >
             Posing Perfect
           </InlineLink>{' '}
-          and Career Iterator. I move fast and go deep.
+          and Career Iterator as sole engineer. I move fast and go deep.
         </Description>
         <CTAs>
           <PrimaryBtn href="#projects">See my work</PrimaryBtn>
@@ -41,22 +48,68 @@ export default function Hero() {
   );
 }
 
-const fadeUp = keyframes`
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+function WaveSvg() {
+  return (
+    <svg
+      viewBox="0 0 1200 100"
+      preserveAspectRatio="none"
+      xmlns="http://www.w3.org/2000/svg"
+      style={{ width: '1200px', height: '100px', flexShrink: 0 }}
+    >
+      {/* Main wave — period 300px, amplitude ±30px */}
+      <path
+        d="M0,50 C42,20 108,80 150,50 C192,20 258,80 300,50 C342,20 408,80 450,50 C492,20 558,80 600,50 C642,20 708,80 750,50 C792,20 858,80 900,50 C942,20 1008,80 1050,50 C1092,20 1158,80 1200,50"
+        fill="none"
+        stroke={theme.colors.phosphor}
+        strokeWidth="1.2"
+        opacity="0.22"
+      />
+      {/* Harmonic — same period, double amplitude */}
+      <path
+        d="M0,50 C42,8 108,92 150,50 C192,8 258,92 300,50 C342,8 408,92 450,50 C492,8 558,92 600,50 C642,8 708,92 750,50 C792,8 858,92 900,50 C942,8 1008,92 1050,50 C1092,8 1158,92 1200,50"
+        fill="none"
+        stroke={theme.colors.phosphor}
+        strokeWidth="0.5"
+        opacity="0.08"
+      />
+    </svg>
+  );
+}
+
+const waveScroll = keyframes`
+  from { transform: translateX(0); }
+  to   { transform: translateX(-1200px); }
 `;
+
+const fadeUp = keyframes`
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+`;
+
 
 const Section = styled.section`
   min-height: 100vh;
   display: flex;
   align-items: center;
   padding: 0 24px;
+  position: relative;
+  overflow: hidden;
+`;
+
+const Waveform = styled.div`
+  position: absolute;
+  bottom: 72px;
+  left: 0;
+  right: 0;
+  height: 100px;
+  overflow: hidden;
+  pointer-events: none;
+`;
+
+const WaveScroller = styled.div`
+  display: flex;
+  animation: ${waveScroll} 28s linear infinite;
+  will-change: transform;
 `;
 
 const Inner = styled.div`
@@ -64,84 +117,76 @@ const Inner = styled.div`
   margin: 0 auto;
   width: 100%;
   padding-top: ${theme.navHeight};
+  position: relative;
+  z-index: 1;
 
   & > * {
-    animation: ${fadeUp} 0.6s ease both;
+    animation: ${fadeUp} 0.7s ease both;
   }
-
-  & > *:nth-child(1) {
-    animation-delay: 0.1s;
-  }
-  & > *:nth-child(2) {
-    animation-delay: 0.2s;
-  }
-  & > *:nth-child(3) {
-    animation-delay: 0.3s;
-  }
-  & > *:nth-child(4) {
-    animation-delay: 0.4s;
-  }
-  & > *:nth-child(5) {
-    animation-delay: 0.5s;
-  }
+  & > *:nth-child(1) { animation-delay: 0.05s; }
+  & > *:nth-child(2) { animation-delay: 0.15s; }
+  & > *:nth-child(3) { animation-delay: 0.25s; }
+  & > *:nth-child(4) { animation-delay: 0.35s; }
+  & > *:nth-child(5) { animation-delay: 0.45s; }
 `;
 
-const Eyebrow = styled.p`
-  font-family: ${theme.fonts.mono};
-  font-size: 0.9rem;
-  color: ${theme.colors.accent};
-  margin-bottom: 12px;
-  letter-spacing: 0.02em;
-`;
 
 const Name = styled.h1`
-  font-size: clamp(3rem, 8vw, 5.5rem);
-  font-weight: 700;
+  margin-bottom: 16px;
+  line-height: 0.9;
+`;
+
+const NameLine = styled.span`
+  display: block;
+  font-family: ${theme.fonts.display};
+  font-size: clamp(4rem, 13vw, 10rem);
+  font-weight: 900;
   color: ${theme.colors.text};
-  line-height: 1.05;
-  letter-spacing: -0.03em;
-  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
 `;
 
 const Tagline = styled.h2`
-  font-size: clamp(1.8rem, 5vw, 3.5rem);
-  font-weight: 600;
+  font-family: ${theme.fonts.display};
+  font-size: clamp(1rem, 2.8vw, 1.6rem);
+  font-weight: 700;
   color: ${theme.colors.textMuted};
-  line-height: 1.1;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   margin-bottom: 28px;
 `;
 
 const Description = styled.p`
-  max-width: 560px;
-  font-size: 1.05rem;
+  max-width: 520px;
+  font-size: 1rem;
   color: ${theme.colors.textMuted};
-  line-height: 1.75;
-  margin-bottom: 40px;
+  line-height: 1.8;
+  margin-bottom: 44px;
 `;
 
 const CTAs = styled.div`
   display: flex;
-  gap: 16px;
+  gap: 14px;
   flex-wrap: wrap;
 `;
 
 const PrimaryBtn = styled.a`
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 12px 28px;
-  background: ${theme.colors.accent};
-  color: #080808;
-  font-size: 0.9rem;
-  font-weight: 600;
-  border-radius: 4px;
+  padding: 11px 28px;
+  background: ${theme.colors.phosphor};
+  color: #080806;
+  font-family: ${theme.fonts.mono};
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   transition:
     opacity 0.2s,
     transform 0.2s;
 
   &:hover {
-    opacity: 0.88;
+    opacity: 0.85;
     transform: translateY(-1px);
   }
 `;
@@ -149,21 +194,22 @@ const PrimaryBtn = styled.a`
 const SecondaryBtn = styled.a`
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 12px 28px;
+  padding: 11px 28px;
   border: 1px solid ${theme.colors.border};
   color: ${theme.colors.textMuted};
-  font-size: 0.9rem;
+  font-family: ${theme.fonts.mono};
+  font-size: 0.78rem;
   font-weight: 500;
-  border-radius: 4px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   transition:
     border-color 0.2s,
     color 0.2s,
     transform 0.2s;
 
   &:hover {
-    border-color: ${theme.colors.borderHover};
-    color: ${theme.colors.text};
+    border-color: ${theme.colors.phosphor};
+    color: ${theme.colors.phosphor};
     transform: translateY(-1px);
   }
 `;

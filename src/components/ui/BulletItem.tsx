@@ -4,9 +4,10 @@ import styled from 'styled-components';
 import { theme } from '@/styles/theme';
 
 export const Arrow = styled.span<{ $marginTop?: string }>`
-  color: ${theme.colors.accent};
+  color: ${theme.colors.phosphor};
   flex-shrink: 0;
   margin-top: ${({ $marginTop }) => $marginTop ?? '1px'};
+  font-size: 0.8rem;
 `;
 
 export const BulletItem = styled.li<{

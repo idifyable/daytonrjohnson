@@ -11,27 +11,27 @@ export const TagList = styled.div`
 
 const TagBase = styled.span`
   border: 1px solid ${theme.colors.border};
-  border-radius: 4px;
   color: ${theme.colors.textMuted};
+  font-family: ${theme.fonts.mono};
+  letter-spacing: 0.03em;
 `;
 
 export const TechTag = styled(TagBase)`
-  font-family: ${theme.fonts.mono};
-  font-size: 0.78rem;
-  background: ${theme.colors.surfaceHover};
-  padding: 4px 10px;
+  font-size: 0.72rem;
+  background: ${theme.colors.panel};
+  padding: 3px 10px;
 `;
 
 export const SkillTag = styled(TagBase)`
-  font-size: 0.875rem;
+  font-size: 0.78rem;
   background: ${theme.colors.surface};
-  padding: 5px 12px;
+  padding: 4px 12px;
   transition:
     color 0.2s,
     border-color 0.2s;
 
   &:hover {
     color: ${theme.colors.text};
-    border-color: ${theme.colors.borderHover};
+    border-color: ${theme.colors.phosphor};
   }
 `;

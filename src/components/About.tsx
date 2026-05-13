@@ -4,12 +4,11 @@ import styled from 'styled-components';
 import { theme } from '@/styles/theme';
 import SectionWrapper from './SectionWrapper';
 import InlineLink from './ui/InlineLink';
-import { Arrow, BulletItem } from './ui/BulletItem';
 
 const FACTS = [
   'Self-taught from the start',
   "Comfortable going deep on things I don't know yet",
-  'Dabbles in embedded synthesizer development',
+  'Embedded synthesizer development on the side',
   "Competed in Men's Physique bodybuilding (Top 3 in debut)",
   'Open to senior remote roles',
 ];
@@ -32,10 +31,10 @@ export default function About() {
             >
               HubSpot
             </InlineLink>{' '}
-            in the Commerce org. I own architecture,
-            cross-team coordination, and delivery across complex, large-scale
-            frontend systems. I write RFCs, take ownership seriously, and care a
-            lot about the systems I leave behind.
+            in the Commerce org. I own architecture, cross-team coordination,
+            and delivery across complex, large-scale frontend systems. I write
+            RFCs, take ownership seriously, and care a lot about the systems I
+            leave behind.
           </p>
           <p>
             On the side, I&apos;m building two SaaS products from scratch as
@@ -51,14 +50,17 @@ export default function About() {
             Iterator, an AI-powered career management tool.
           </p>
         </Bio>
-        <FactList>
-          {FACTS.map((fact) => (
-            <BulletItem key={fact} $fontSize="0.9rem" $lineHeight="1.5">
-              <Arrow $marginTop="1px">▸</Arrow>
-              <span>{fact}</span>
-            </BulletItem>
-          ))}
-        </FactList>
+        <SysInfo>
+          <SysInfoLabel>SYS.INFO</SysInfoLabel>
+          <FactList>
+            {FACTS.map((fact) => (
+              <FactItem key={fact}>
+                <FactBullet>▸</FactBullet>
+                <span>{fact}</span>
+              </FactItem>
+            ))}
+          </FactList>
+        </SysInfo>
       </Grid>
     </SectionWrapper>
   );
@@ -88,9 +90,41 @@ const Bio = styled.div`
   }
 `;
 
+const SysInfo = styled.div`
+  border: 1px solid ${theme.colors.border};
+  background: ${theme.colors.surface};
+  padding: 24px;
+`;
+
+const SysInfoLabel = styled.div`
+  font-family: ${theme.fonts.mono};
+  font-size: 0.65rem;
+  color: ${theme.colors.phosphor};
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid ${theme.colors.border};
+`;
+
 const FactList = styled.ul`
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 12px;
+`;
+
+const FactItem = styled.li`
+  display: flex;
+  gap: 10px;
+  font-size: 0.875rem;
+  color: ${theme.colors.textMuted};
+  line-height: 1.5;
+`;
+
+const FactBullet = styled.span`
+  color: ${theme.colors.phosphor};
+  flex-shrink: 0;
+  margin-top: 1px;
+  font-size: 0.8rem;
 `;

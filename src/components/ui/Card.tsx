@@ -8,26 +8,33 @@ export const CardBase = styled.div`
   border: 1px solid ${theme.colors.border};
   display: flex;
   flex-direction: column;
-  transition: border-color 0.2s;
+  transition:
+    border-color 0.2s,
+    background 0.2s;
 
   &:hover {
     border-color: ${theme.colors.borderHover};
+    background: ${theme.colors.surfaceHover};
   }
 `;
 
 export const FeaturedCard = styled(CardBase)`
-  border-radius: 8px;
+  border-left: 3px solid ${theme.colors.phosphor};
   padding: 36px;
   gap: 20px;
+
+  &:hover {
+    border-left-color: ${theme.colors.phosphor};
+  }
 `;
 
 export const OtherCard = styled(CardBase)`
-  border-radius: 6px;
   padding: 24px;
   gap: 12px;
   cursor: pointer;
   transition:
     border-color 0.2s,
+    background 0.2s,
     transform 0.2s;
 
   &:hover {
