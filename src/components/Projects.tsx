@@ -9,6 +9,7 @@ import { TagList, TechTag } from './ui/TagList';
 const PROJECTS = [
   {
     name: 'Posing Perfect',
+    url: 'https://www.posingperfect.com',
     tagline: 'A full-stack platform for bodybuilding coaches and athletes.',
     description:
       "Built around a problem I ran into firsthand: preparing for my debut Men's Physique competition. I handle product, system architecture, backend (Supabase/PostgreSQL), frontend (Next.js/React), auth, testing (Cypress), and deployment (Vercel).",
@@ -32,7 +33,13 @@ export default function Projects() {
     <SectionWrapper id="projects" label="Projects">
       <FeaturedGrid>
         {PROJECTS.map((project) => (
-          <FeaturedCard key={project.name}>
+          <FeaturedCard
+            as={project.url ? 'a' : 'div'}
+            href={project.url}
+            target={project.url ? '_blank' : undefined}
+            rel={project.url ? 'noopener noreferrer' : undefined}
+            key={project.name}
+          >
             <CardTop>
               <CardMeta>
                 <StatusBadge>{project.status}</StatusBadge>
