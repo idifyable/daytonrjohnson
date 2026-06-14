@@ -9,7 +9,7 @@ import { Arrow, BulletItem } from './ui/BulletItem';
 const FACTS = [
   'Self-taught from the start',
   "Competed in Men's Physique bodybuilding (Top 3 in debut)",
-  'Forever learner of jazz piano',
+  'Forever student of jazz piano',
   'Juggling and unicycling enthusiast (but not at the same time)',
 ];
 
