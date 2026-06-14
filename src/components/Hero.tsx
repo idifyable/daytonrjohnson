@@ -122,17 +122,19 @@ const PrimaryBtn = styled.a`
   align-items: center;
   gap: 8px;
   padding: 12px 28px;
-  background: ${theme.colors.accent};
-  color: #080808;
+  background: ${theme.colors.surface};
+  color: ${theme.colors.accent};
+  border: 1px solid ${theme.colors.accent};
   font-size: 0.9rem;
   font-weight: 600;
   border-radius: 4px;
   transition:
-    opacity 0.2s,
+    background 0.2s,
+    color 0.2s,
     transform 0.2s;
 
   &:hover {
-    opacity: 0.88;
+    background: ${theme.colors.accentDim};
     transform: translateY(-1px);
   }
 `;

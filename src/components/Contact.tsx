@@ -55,7 +55,7 @@ const Body = styled.p`
 
 const EmailLink = styled.a`
   display: inline-block;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-family: ${theme.fonts.mono};
   color: ${theme.colors.accent};
   border: 1px solid ${theme.colors.accent};
