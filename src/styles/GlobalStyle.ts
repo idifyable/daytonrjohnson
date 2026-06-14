@@ -1,5 +1,5 @@
-import { createGlobalStyle } from 'styled-components'
-import { theme } from './theme'
+import { createGlobalStyle } from 'styled-components';
+import { theme } from './theme';
 
 const GlobalStyle = createGlobalStyle`
   *, *::before, *::after {
@@ -14,12 +14,18 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
+    min-height: 100vh;
     background-color: ${theme.colors.bg};
     color: ${theme.colors.text};
     font-family: ${theme.fonts.sans};
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: ${theme.fonts.display};
+    color: ${theme.colors.text};
   }
 
   a {
@@ -51,6 +57,6 @@ const GlobalStyle = createGlobalStyle`
     background: ${theme.colors.border};
     border-radius: 3px;
   }
-`
+`;
 
-export default GlobalStyle
+export default GlobalStyle;
