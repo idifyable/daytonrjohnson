@@ -4,7 +4,6 @@ import { useState } from 'react';
 import styled from 'styled-components';
 import { theme } from '@/styles/theme';
 import SectionWrapper from './SectionWrapper';
-import { Arrow, BulletItem } from './ui/BulletItem';
 
 const JOBS = [
   {
@@ -12,55 +11,40 @@ const JOBS = [
     url: 'https://www.hubspot.com',
     title: 'Senior Software Engineer, Commerce Platform',
     range: 'Aug 2022 – Present',
-    bullets: [
-      "Senior engineer in HubSpot's Commerce org, shaping frontend architecture across a large multi-repo system spanning pricing, line items, discounts, and product bundles.",
-      'Led end-to-end delivery of tiered pricing across a complex multi-repo system, driving architectural decisions, resolving dependency challenges, and coordinating across teams to ship at scale.',
-      'Designed and built the Bundle Item Edit Panel, establishing state management, product logic, and multicurrency integration.',
-      'Served as frontend DRI for Discount Codes Enhancements, aligned backend requirements, and shipped the full implementation.',
-      'Delivered Line Item Field-Level Permissions under critical production conditions, coordinating across multiple teams and frontend surfaces.',
-      'Authored RFCs, technical explainers, and cross-team planning artifacts.',
-    ],
+    summary:
+      'At HubSpot Commerce, I build frontend architecture for enterprise commerce workflows, including pricing, product records, and line item experiences.',
   },
   {
     company: 'WebMD',
     url: 'https://www.webmd.com',
     title: 'Senior Software Engineer',
     range: 'Feb 2021 – Aug 2022',
-    bullets: [
-      'Senior frontend engineer on consumer-facing health content and tooling reaching millions of users monthly.',
-      'Led frontend architecture decisions and mentored junior engineers on the team.',
-    ],
+    summary:
+      'At WebMD Provider Services, I led frontend development for patient education platforms and authoring systems, designed mobile experiences that delivered personalized content based on EHR data, and established modern React and Node.js practices for a small hybrid engineering team.',
   },
   {
     company: 'Entropy Multimedia',
     url: 'https://entropy.cc/',
     title: 'Full Stack JavaScript Developer',
     range: 'Mar 2019 – Feb 2021',
-    bullets: [
-      'Built full-stack web applications for clients using React, Node.js, and modern JavaScript tooling.',
-      'Worked across the stack from UI to APIs and database integrations.',
-    ],
+    summary:
+      'At Entropy Multimedia, I built consistent frontend architecture across a large hospitality property portfolio, implemented internationalization and accessibility compliance for a multi-language enterprise platform, and delivered internal React Native tooling for operations workflows.',
   },
   {
     company: 'First Net Impressions',
     url: 'https://www.firstnetimpressions.com/',
     title: 'Lead Full Stack Web Developer',
     range: 'Apr 2017 – Mar 2019',
-    bullets: [
-      'Led web development for a small agency, delivering client projects from scoping through launch.',
-      'Managed client relationships and technical direction across multiple concurrent engagements.',
-    ],
+    summary:
+      'At First Net Impressions, I created reusable templating and theming systems to accelerate client delivery, maintained a large legacy website portfolio through incremental updates, and managed infrastructure and hosting operations including routine maintenance and incident response.',
   },
   {
     company: 'Appreciate The Discrete',
     url: '#',
     title: 'Founder & Software Engineer',
     range: 'Jun 2016 – Present',
-    bullets: [
-      'Founded and operate a software consultancy and product development LLC. Currently building two SaaS products independently as product owner and engineer.',
-      'Posing Perfect: a full-stack platform for bodybuilding coaches and athletes. I handle product, architecture, backend (Supabase/PostgreSQL), frontend (Next.js/React), auth, testing (Cypress), and deployment (Vercel).',
-      'Career Iterator: an AI-powered career management tool built independently.',
-    ],
+    summary:
+      'I founded and operate a software consultancy and product development LLC, building SaaS products independently from concept through launch while owning frontend, backend, testing, and deployment across customer-facing tools and internal workflows.',
   },
 ];
 
@@ -92,14 +76,7 @@ export default function Experience() {
             </CompanyLink>
           </JobTitle>
           <Range>{job.range}</Range>
-          <Bullets>
-            {job.bullets.map((b) => (
-              <BulletItem key={b}>
-                <Arrow $marginTop="3px">▸</Arrow>
-                <span>{b}</span>
-              </BulletItem>
-            ))}
-          </Bullets>
+          <Summary>{job.summary}</Summary>
         </Panel>
       </Layout>
     </SectionWrapper>
@@ -164,6 +141,13 @@ const Panel = styled.div`
   min-height: 200px;
 `;
 
+const Summary = styled.p`
+  font-size: 1rem;
+  color: ${theme.colors.textMuted};
+  line-height: 1.8;
+  margin-top: 0;
+`;
+
 const JobTitle = styled.h3`
   font-size: 1.05rem;
   font-weight: 500;
@@ -185,11 +169,4 @@ const Range = styled.p`
   font-size: 0.8rem;
   color: ${theme.colors.textMuted};
   margin-bottom: 24px;
-`;
-
-const Bullets = styled.ul`
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
 `;
