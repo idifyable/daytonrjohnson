@@ -1,7 +1,8 @@
-import type { Metadata } from 'next'
-import StyledComponentsRegistry from '@/lib/registry'
-import GlobalStyle from '@/styles/GlobalStyle'
-import './globals.css'
+import { Analytics } from '@vercel/analytics/next';
+import type { Metadata } from 'next';
+import StyledComponentsRegistry from '@/lib/registry';
+import GlobalStyle from '@/styles/GlobalStyle';
+import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Dayton Johnson — Software Engineer',
@@ -18,17 +19,18 @@ export const metadata: Metadata = {
     locale: 'en_US',
     type: 'website',
   },
-}
+};
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body>
+        <Analytics />
         <StyledComponentsRegistry>
           <GlobalStyle />
           {children}
         </StyledComponentsRegistry>
       </body>
     </html>
-  )
+  );
 }
