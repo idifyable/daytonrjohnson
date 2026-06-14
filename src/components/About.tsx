@@ -8,10 +8,9 @@ import { Arrow, BulletItem } from './ui/BulletItem';
 
 const FACTS = [
   'Self-taught from the start',
-  "Comfortable going deep on things I don't know yet",
-  'Dabbles in embedded synthesizer development',
   "Competed in Men's Physique bodybuilding (Top 3 in debut)",
-  'Open to senior remote roles',
+  'Forever learner of jazz piano',
+  'Juggling and unicycling enthusiast (but not at the same time)',
 ];
 
 export default function About() {
