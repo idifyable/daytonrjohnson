@@ -28,9 +28,16 @@ export default function About() {
             RFCs and leaving behind systems that are easier to maintain.
           </p>
           <p>
-            Outside work, I ship two products: Posing Perfect, a coach-and-athlete platform born
-            from my own competition prep, and Career Iterator, a private corpus for tracking wins
-            and mapping the next step.
+            Outside work, I ship two products:{' '}
+            <InlineLink
+              href="https://www.posingperfect.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Posing Perfect
+            </InlineLink>
+            , a coach-and-athlete platform born from my own competition prep, and Career Iterator, a
+            private corpus for tracking wins and mapping the next step.
           </p>
         </Bio>
         <FactList>
