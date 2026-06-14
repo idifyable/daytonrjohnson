@@ -20,18 +20,18 @@ export default function About() {
       <Grid>
         <Bio>
           <p>
-            I build production SaaS, large frontend systems, and the glue between product and
-            engineering.
+            I build product-facing SaaS and the systems that help teams move faster without adding
+            complexity.
           </p>
           <p>
-            At HubSpot Commerce, I focus on reliable architecture, cross-team execution, and making
-            growing products easier to maintain. I write RFCs, partner closely with backend and
-            product teams, and care about the systems I leave behind.
+            At HubSpot Commerce, I help cross-functional teams simplify pricing, catalog, and line
+            item workflows so the product can grow with fewer hidden edge cases. I enjoy writing
+            RFCs and leaving behind systems that are easier to maintain.
           </p>
           <p>
-            Otherwise, I'm shipping two products from concept to launch: Posing Perfect, a coaching
-            platform born from prep for my debut Men's Physique competition, and Career Iterator, an
-            AI-driven career management tool.
+            Outside work, I ship two products: Posing Perfect, a coach-and-athlete platform born
+            from my own competition prep, and Career Iterator, a private corpus for tracking wins
+            and mapping the next step.
           </p>
         </Bio>
         <FactList>
