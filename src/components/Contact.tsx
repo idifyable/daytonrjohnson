@@ -1,8 +1,8 @@
-'use client'
+'use client';
 
-import styled from 'styled-components'
-import { theme } from '@/styles/theme'
-import SectionWrapper from './SectionWrapper'
+import styled from 'styled-components';
+import { theme } from '@/styles/theme';
+import SectionWrapper from './SectionWrapper';
 
 export default function Contact() {
   return (
@@ -10,9 +10,8 @@ export default function Contact() {
       <Inner>
         <Heading>Let&apos;s work together.</Heading>
         <Body>
-          I&apos;m open to senior engineering roles, interesting consulting
-          engagements, and conversations with other builders. If you&apos;ve got
-          something worth talking about, reach out.
+          I&apos;m open to interesting consulting engagements and conversations with other builders.
+          If you&apos;ve got something worth talking about, reach out.
         </Body>
         <EmailLink href="mailto:dayton@appreciatethediscrete.com">
           dayton@appreciatethediscrete.com
@@ -22,18 +21,22 @@ export default function Contact() {
             GitHub
           </SocialLink>
           <Dot>·</Dot>
-          <SocialLink href="https://www.linkedin.com/in/daytonrjohnson/" target="_blank" rel="noopener noreferrer">
+          <SocialLink
+            href="https://www.linkedin.com/in/daytonrjohnson/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             LinkedIn
           </SocialLink>
         </SocialLinks>
       </Inner>
     </SectionWrapper>
-  )
+  );
 }
 
 const Inner = styled.div`
   max-width: 560px;
-`
+`;
 
 const Heading = styled.h3`
   font-size: clamp(1.8rem, 4vw, 2.5rem);
@@ -41,14 +44,14 @@ const Heading = styled.h3`
   color: ${theme.colors.text};
   letter-spacing: -0.02em;
   margin-bottom: 20px;
-`
+`;
 
 const Body = styled.p`
   font-size: 1rem;
   color: ${theme.colors.textMuted};
   line-height: 1.75;
   margin-bottom: 36px;
-`
+`;
 
 const EmailLink = styled.a`
   display: inline-block;
@@ -64,13 +67,13 @@ const EmailLink = styled.a`
   &:hover {
     background: ${theme.colors.accentDim};
   }
-`
+`;
 
 const SocialLinks = styled.div`
   display: flex;
   align-items: center;
   gap: 12px;
-`
+`;
 
 const SocialLink = styled.a`
   font-size: 0.9rem;
@@ -80,8 +83,8 @@ const SocialLink = styled.a`
   &:hover {
     color: ${theme.colors.accent};
   }
-`
+`;
 
 const Dot = styled.span`
   color: ${theme.colors.textSubtle};
-`
+`;
