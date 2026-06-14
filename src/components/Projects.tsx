@@ -11,15 +11,8 @@ const PROJECTS = [
     name: 'Posing Perfect',
     tagline: 'A full-stack platform for bodybuilding coaches and athletes.',
     description:
-      "Built around a problem I ran into firsthand: preparing for my debut Men's Physique competition. I own everything: product, system architecture, backend (Supabase/PostgreSQL), frontend (Next.js/React), auth, testing (Cypress), and deployment (Vercel).",
-    tech: [
-      'Next.js',
-      'TypeScript',
-      'Supabase',
-      'PostgreSQL',
-      'Cypress',
-      'Vercel',
-    ],
+      "Built around a problem I ran into firsthand: preparing for my debut Men's Physique competition. I handle product, system architecture, backend (Supabase/PostgreSQL), frontend (Next.js/React), auth, testing (Cypress), and deployment (Vercel).",
+    tech: ['Next.js', 'TypeScript', 'Supabase', 'PostgreSQL', 'Cypress', 'Vercel'],
     status: 'In development',
     featured: true,
   },
@@ -27,7 +20,7 @@ const PROJECTS = [
     name: 'Career Iterator',
     tagline: 'An AI-powered career management tool.',
     description:
-      "Built as sole engineer. A tool for taking a deliberate approach to career growth: tracking what you've done, identifying where to go next, and making progress concrete.",
+      "Built independently as a tool for deliberate career growth: tracking what you've done, identifying where to go next, and making progress concrete.",
     tech: ['TypeScript', 'React', 'Hono'],
     status: 'In development',
     featured: true,
@@ -58,7 +51,6 @@ export default function Projects() {
           </FeaturedCard>
         ))}
       </FeaturedGrid>
-
     </SectionWrapper>
   );
 }

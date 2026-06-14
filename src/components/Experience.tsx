@@ -13,11 +13,11 @@ const JOBS = [
     title: 'Senior Software Engineer, Commerce Platform',
     range: 'Aug 2022 – Present',
     bullets: [
-      "Senior engineer in HubSpot's Commerce org, owning frontend architecture across a large multi-repo system spanning pricing, line items, discounts, and product bundles.",
+      "Senior engineer in HubSpot's Commerce org, shaping frontend architecture across a large multi-repo system spanning pricing, line items, discounts, and product bundles.",
       'Led end-to-end delivery of tiered pricing across a complex multi-repo system, driving architectural decisions, resolving dependency challenges, and coordinating across teams to ship at scale.',
-      'Independently designed and built the Bundle Item Edit Panel, owning state management architecture, product logic, and multicurrency integration.',
-      'Served as frontend DRI for Discount Codes Enhancements, owning requirements alignment with backend and full implementation independently.',
-      'Drove Line Item Field-Level Permissions to rollout under critical production conditions, coordinating across multiple teams and frontend surfaces.',
+      'Designed and built the Bundle Item Edit Panel, establishing state management, product logic, and multicurrency integration.',
+      'Served as frontend DRI for Discount Codes Enhancements, aligned backend requirements, and shipped the full implementation.',
+      'Delivered Line Item Field-Level Permissions under critical production conditions, coordinating across multiple teams and frontend surfaces.',
       'Authored RFCs, technical explainers, and cross-team planning artifacts.',
     ],
   },
@@ -57,9 +57,9 @@ const JOBS = [
     title: 'Founder & Software Engineer',
     range: 'Jun 2016 – Present',
     bullets: [
-      'Founded and operate a software consultancy and product development LLC. Currently building two SaaS products as sole engineer and product owner.',
-      'Posing Perfect: a full-stack platform for bodybuilding coaches and athletes. I own product, architecture, backend (Supabase/PostgreSQL), frontend (Next.js/React), auth, testing (Cypress), and deployment (Vercel).',
-      'Career Iterator: an AI-powered career management tool, built as sole engineer.',
+      'Founded and operate a software consultancy and product development LLC. Currently building two SaaS products independently as product owner and engineer.',
+      'Posing Perfect: a full-stack platform for bodybuilding coaches and athletes. I handle product, architecture, backend (Supabase/PostgreSQL), frontend (Next.js/React), auth, testing (Cypress), and deployment (Vercel).',
+      'Career Iterator: an AI-powered career management tool built independently.',
     ],
   },
 ];
@@ -87,11 +87,7 @@ export default function Experience() {
         <Panel role="tabpanel">
           <JobTitle>
             {job.title}{' '}
-            <CompanyLink
-              href={job.url}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <CompanyLink href={job.url} target="_blank" rel="noopener noreferrer">
               @ {job.company}
             </CompanyLink>
           </JobTitle>
@@ -140,12 +136,9 @@ const Tab = styled.button<{ $active: boolean }>`
   font-size: 0.85rem;
   font-family: ${theme.fonts.mono};
   text-align: left;
-  color: ${({ $active }) =>
-    $active ? theme.colors.accent : theme.colors.textMuted};
-  background: ${({ $active }) =>
-    $active ? theme.colors.accentDim : 'transparent'};
-  border-left: 2px solid
-    ${({ $active }) => ($active ? theme.colors.accent : 'transparent')};
+  color: ${({ $active }) => ($active ? theme.colors.accent : theme.colors.textMuted)};
+  background: ${({ $active }) => ($active ? theme.colors.accentDim : 'transparent')};
+  border-left: 2px solid ${({ $active }) => ($active ? theme.colors.accent : 'transparent')};
   margin-left: -1px;
   transition:
     color 0.2s,
@@ -160,8 +153,7 @@ const Tab = styled.button<{ $active: boolean }>`
 
   @media (max-width: ${theme.breakpoints.sm}) {
     border-left: none;
-    border-bottom: 2px solid
-      ${({ $active }) => ($active ? theme.colors.accent : 'transparent')};
+    border-bottom: 2px solid ${({ $active }) => ($active ? theme.colors.accent : 'transparent')};
     margin-left: 0;
     margin-bottom: -1px;
   }
