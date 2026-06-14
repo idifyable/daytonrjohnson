@@ -45,10 +45,12 @@ const NavBar = styled.nav<{ $scrolled: boolean }>`
   height: ${theme.navHeight};
   transition:
     background 0.3s ease,
-    border-color 0.3s ease;
-  background: ${({ $scrolled }) => ($scrolled ? 'rgba(8, 8, 8, 0.92)' : 'transparent')};
-  backdrop-filter: ${({ $scrolled }) => ($scrolled ? 'blur(12px)' : 'none')};
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+  background: ${({ $scrolled }) => ($scrolled ? 'rgba(246, 245, 242, 0.95)' : 'transparent')};
+  backdrop-filter: ${({ $scrolled }) => ($scrolled ? 'blur(10px)' : 'none')};
   border-bottom: 1px solid ${({ $scrolled }) => ($scrolled ? theme.colors.border : 'transparent')};
+  box-shadow: ${({ $scrolled }) => ($scrolled ? '0 18px 30px rgba(36, 41, 46, 0.08)' : 'none')};
 `;
 
 const NavInner = styled.div`
