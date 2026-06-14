@@ -92,6 +92,10 @@ const Layout = styled.div`
     flex-direction: column;
     gap: 24px;
   }
+
+  @media (max-width: 420px) {
+    gap: 16px;
+  }
 `;
 
 const TabList = styled.div`
@@ -102,9 +106,18 @@ const TabList = styled.div`
 
   @media (max-width: ${theme.breakpoints.sm}) {
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     border-left: none;
     border-bottom: 1px solid ${theme.colors.border};
+    padding: 0 12px 8px;
+    width: 100%;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 `;
 
@@ -122,6 +135,7 @@ const Tab = styled.button<{ $active: boolean }>`
     background 0.2s,
     border-color 0.2s;
   white-space: nowrap;
+  flex: 0 0 auto;
 
   &:hover {
     color: ${theme.colors.text};
@@ -132,7 +146,8 @@ const Tab = styled.button<{ $active: boolean }>`
     border-left: none;
     border-bottom: 2px solid ${({ $active }) => ($active ? theme.colors.accent : 'transparent')};
     margin-left: 0;
-    margin-bottom: -1px;
+    margin-right: 8px;
+    margin-bottom: 0;
   }
 `;
 
