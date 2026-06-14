@@ -10,27 +10,18 @@ export default function Hero() {
       <Inner>
         <Eyebrow>Hey, I&apos;m</Eyebrow>
         <Name>Dayton Johnson.</Name>
-        <Tagline>I make software.</Tagline>
+        <Tagline>Full stack builder</Tagline>
         <Description>
           Senior engineer at{' '}
-          <InlineLink
-            href="https://www.hubspot.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <InlineLink href="https://www.hubspot.com" target="_blank" rel="noopener noreferrer">
             HubSpot
           </InlineLink>{' '}
-          in Commerce, owning core frontend architecture across line items,
-          products, and pricing. On the side, I build two SaaS products as sole
-          engineer:{' '}
-          <InlineLink
-            href="https://posingperfect.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          in Commerce, responsible for frontend architecture around pricing, line items, and
+          products. I'm also building{' '}
+          <InlineLink href="https://posingperfect.com" target="_blank" rel="noopener noreferrer">
             Posing Perfect
           </InlineLink>{' '}
-          and Career Iterator. I move fast and go deep.
+          and Career Iterator.
         </Description>
         <CTAs>
           <PrimaryBtn href="#projects">See my work</PrimaryBtn>
