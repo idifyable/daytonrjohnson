@@ -9,14 +9,14 @@ const JOBS = [
   {
     company: 'HubSpot',
     url: 'https://www.hubspot.com',
-    title: 'Senior Software Engineer, Commerce Platform',
+    title: 'Senior Software Engineer',
     range: 'Aug 2022 – Present',
     summary:
       'At HubSpot Commerce, I build frontend architecture for enterprise commerce workflows, including pricing, product records, and line item experiences.',
   },
   {
-    company: 'WebMD',
-    url: 'https://www.webmd.com',
+    company: 'WebMD Provider Services',
+    url: 'https://webmdignite.com/',
     title: 'Senior Software Engineer',
     range: 'Feb 2021 – Aug 2022',
     summary:
