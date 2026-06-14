@@ -8,19 +8,19 @@ import { TagList, SkillTag } from './ui/TagList';
 const SKILL_GROUPS = [
   {
     label: 'Languages',
-    skills: ['TypeScript', 'JavaScript', 'HTML', 'CSS', 'SQL'],
+    skills: ['TypeScript', 'JavaScript', 'SQL', 'GraphQL', 'PHP'],
   },
   {
-    label: 'Frontend',
-    skills: ['React', 'Next.js', 'React Native'],
+    label: 'Frameworks',
+    skills: ['React', 'Next.js', 'React Native', 'Node.js', 'React Testing Library', 'Cypress'],
   },
   {
-    label: 'Backend & Infra',
-    skills: ['Node.js', 'PostgreSQL', 'Supabase', 'REST', 'GraphQL', 'Docker'],
+    label: 'AI Tools',
+    skills: ['Claude Code', 'Cursor', 'AI Workflow Automation'],
   },
   {
-    label: 'Tooling & Process',
-    skills: ['Cypress', 'System Design', 'Git', 'GitHub', 'Linear'],
+    label: 'Tools',
+    skills: ['PostgreSQL', 'Supabase', 'Git', 'Docker', 'MongoDB'],
   },
 ];
 

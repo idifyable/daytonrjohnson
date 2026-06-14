@@ -8,10 +8,9 @@ import { Arrow, BulletItem } from './ui/BulletItem';
 
 const FACTS = [
   'Self-taught from the start',
-  "Comfortable going deep on things I don't know yet",
-  'Dabbles in embedded synthesizer development',
   "Competed in Men's Physique bodybuilding (Top 3 in debut)",
-  'Open to senior remote roles',
+  'Forever learner of jazz piano',
+  'Juggling and unicycling enthusiast (but not at the same time)',
 ];
 
 export default function About() {
@@ -20,35 +19,18 @@ export default function About() {
       <Grid>
         <Bio>
           <p>
-            I make software. Production SaaS, complex frontend systems at scale,
-            and everything in between.
+            I build product-facing SaaS and the systems that help teams move faster without adding
+            complexity.
           </p>
           <p>
-            By day I&apos;m a senior engineer at{' '}
-            <InlineLink
-              href="https://www.hubspot.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              HubSpot
-            </InlineLink>{' '}
-            in the Commerce org. I own architecture,
-            cross-team coordination, and delivery across complex, large-scale
-            frontend systems. I write RFCs, take ownership seriously, and care a
-            lot about the systems I leave behind.
+            At HubSpot Commerce, I help cross-functional teams simplify pricing, catalog, and line
+            item workflows so the product can grow with fewer hidden edge cases. I enjoy writing
+            RFCs and leaving behind systems that are easier to maintain.
           </p>
           <p>
-            On the side, I&apos;m building two SaaS products from scratch as
-            sole engineer:{' '}
-            <InlineLink
-              href="https://posingperfect.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Posing Perfect
-            </InlineLink>
-            , a platform for bodybuilding coaches and athletes, and Career
-            Iterator, an AI-powered career management tool.
+            Outside work, I ship two products: Posing Perfect, a coach-and-athlete platform born
+            from my own competition prep, and Career Iterator, a private corpus for tracking wins
+            and mapping the next step.
           </p>
         </Bio>
         <FactList>
